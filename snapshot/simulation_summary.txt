@@ -1,0 +1,391 @@
+Simulation Log Summary - Generated on 2025-07-01 15:24:52
+Last Real Time: 1751354518276
+Last Game Time: 1888746902655
+Tick Count: 4
+====================================================================================================
+
+Agent ID: NPC-10001
+----------------------------------------------------------------------------------------------------
+Name: ProfChenWeiya
+Bio: Chen Weiya is a structural engineering professor who enjoys sparking conversations in the rest area.
+Goal: Wander the rest area after class to meet colleagues or students and discuss research.
+
+Current State:
+- Buildings available: dessert shop, office, houseZ, park, office-1, office-2, office-3
+- People nearby: ProfZhouCheng
+- Cash: 10000
+- Game Time: 1749030801.435
+
+====================================================================================================
+
+Agent ID: NPC-10002
+----------------------------------------------------------------------------------------------------
+Name: ProfZhouCheng
+Bio: Zhou Cheng is a civil engineering professor known for his engaging office hours.
+Goal: Hold impromptu Q&A sessions in the lounge to help students with their projects.
+
+Current State:
+- Buildings available: dessert shop, office, houseZ, park, office-1, office-2, office-3
+- People nearby: 
+- Cash: 10000
+- Game Time: 1749038840.835
+
+====================================================================================================
+
+Agent ID: NPC-10003
+----------------------------------------------------------------------------------------------------
+Name: ProfLuohanbin
+Bio: Luo Hanbin is an introverted professor who prefers small-group discussions.
+Goal: Seek out one or two colleagues for deep technical talks in quiet corners.
+
+Current State:
+- Buildings available: dessert shop, office, houseZ, park, office-1, office-2, office-3
+- People nearby: 
+- Cash: 10000
+- Game Time: 1749038840.835
+
+====================================================================================================
+
+Agent ID: NPC-10004
+----------------------------------------------------------------------------------------------------
+Name: ZhangJiayuan
+Bio: Zhang Jiayuan is an outgoing student who loves exploring public spaces.
+Goal: Roam the rest area to find classmates for group study sessions.
+
+Current State:
+- Buildings available: dessert shop, office, houseZ, park, office-1, office-2, office-3
+- People nearby: ProfLuohanbin
+- Cash: 10000
+- Game Time: 1749030801.435
+
+====================================================================================================
+
+Agent ID: NPC-10005
+----------------------------------------------------------------------------------------------------
+Name: WangZining
+Bio: Wang Zining is a serious student who keeps to herself.
+Goal: Head straight to the office and avoid idle chit-chat.
+
+Current State:
+- Buildings available: dessert shop, office, houseZ, park, office-1, office-2, office-3
+- People nearby: 
+- Cash: 10000
+- Game Time: 1749030801.435
+
+====================================================================================================
+
+Agent ID: NPC-10006
+----------------------------------------------------------------------------------------------------
+Name: MaJiangping
+Bio: Ma Jiangping is a curious student who enjoys spontaneous meetups.
+Goal: Wander through the corridor looking for chance encounters with peers.
+
+Current State:
+- Buildings available: dessert shop, office, houseZ, park, office-1, office-2, office-3
+- People nearby: ProfChenWeiya, ZhangJiayuan
+- Cash: 10000
+- Game Time: 1749038840.835
+
+====================================================================================================
+
+Agent ID: NPC-10007
+----------------------------------------------------------------------------------------------------
+Name: CaiJianhua
+Bio: Cai Jianhua is a friendly administrator who chats while on duty.
+Goal: Deliver mail across offices and greet colleagues in the hallway.
+
+Current State:
+- Buildings available: dessert shop, office, houseZ, park, office-1, office-2, office-3
+- People nearby: MaJiangping
+- Cash: 10000
+- Game Time: 1749030801.435
+
+====================================================================================================
+
+Agent ID: NPC-10008
+----------------------------------------------------------------------------------------------------
+Name: LiWenpeng
+Bio: Li Wenpeng is a no-nonsense staff member focused on efficiency.
+Goal: Move directly between offices to complete tasks with minimal stops.
+
+Current State:
+- Buildings available: dessert shop, office, houseZ, park, office-1, office-2, office-3
+- People nearby: SongJunbo
+- Cash: 10000
+- Game Time: 1749038840.835
+
+====================================================================================================
+
+Agent ID: NPC-10009
+----------------------------------------------------------------------------------------------------
+Name: SongJunbo
+Bio: SongJunbo is a task-oriented scholar limiting social engagement to essentials, pursuing maximally efficient routes.
+Goal: Take shortest path from study room to advisor's office for thesis consultation while declining all non-essential interactions during transit.
+
+Current State:
+- Buildings available: dessert shop, office, houseZ, park, office-1, office-2, office-3
+- People nearby: LiWenpeng
+- Cash: 10000
+- Game Time: 1749038840.835
+
+====================================================================================================
+
+Agent ID: NPC-10010
+----------------------------------------------------------------------------------------------------
+Name: ProfChenWeiya
+Bio: Chen Weiya is a structural engineering professor who enjoys sparking conversations in the rest area.
+Goal: Wander the rest area after class to meet colleagues or students and discuss research.
+
+Current State:
+- Buildings available: dessert shop, office, houseZ, park, office-1, office-2, office-3, store, restaurant, gym, houseZ-1, park-1, houseZ-2
+- People nearby: ProfZhouCheng
+- Cash: 10000
+- Game Time: 1888743384.615
+
+====================================================================================================
+
+Agent ID: NPC-10011
+----------------------------------------------------------------------------------------------------
+Name: ProfZhouCheng
+Bio: Zhou Cheng is a civil engineering professor known for his engaging office hours.
+Goal: Hold impromptu Q&A sessions in the lounge to help students with their projects.
+
+Current State:
+- Buildings available: dessert shop, office, houseZ, park, office-1, office-2, office-3, store, restaurant, gym, houseZ-1, park-1, houseZ-2
+- People nearby: LiWenpeng, ProfZhouCheng
+- Cash: 10000
+- Game Time: 1888746902.655
+
+Historical Actions (act_cache):
+  Action #1:
+    Equipment: table
+    Operation: Sit on table
+    Continue Time: 1800000 seconds
+    Result: can't finish meal
+  Action #2:
+    Equipment: worktop
+    Operation: Sit on worktop
+    Continue Time: 1800000 seconds
+    Result: can't finish meal
+
+Historical Conversations (chat_cache):
+  Conversation #1:
+    Speaker: SongJunbo
+    Content: SongJunbo : ProfZhouCheng, how's your thesis research going?
+  Conversation #2:
+    Speaker: ProfZhouCheng
+    Content: ProfZhouCheng : I'm glad your thesis is progressing well! Let me know how I can help you today.
+  Conversation #3:
+    Speaker: SongJunbo
+    Content: SongJunbo : ProfZhouCheng, I have some thesis-related questions I'd like to discuss.
+  Conversation #4:
+    Speaker: ProfZhouCheng
+    Content: ProfZhouCheng : I'm happy to help with your thesis consultations! Let me know what questions you have.
+  Conversation #5:
+    Speaker: SongJunbo
+    Content: SongJunbo : Do you have any specific questions about your thesis that I can help clarify?
+  Conversation #6:
+    Speaker: ProfZhouCheng
+    Content: ProfZhouCheng : That sounds like a great idea! How can I assist you today?
+  Conversation #7:
+    Speaker: SongJunbo
+    Content: SongJunbo : I'm interested in exploring topics related to environmental sustainability. How can I assist you today?
+  Conversation #8:
+    Speaker: ProfZhouCheng
+    Content: ProfZhouCheng : That sounds interesting! How can I assist you today regarding environmental sustainability?
+  Conversation #9:
+    Speaker: SongJunbo
+    Content: SongJunbo : ProfZhouCheng, could you elaborate on the specific areas of your thesis research?
+  Conversation #10:
+    Speaker: ProfZhouCheng
+    Content: ProfZhouCheng : Sustainable building materials are a fascinating area! How can I assist you today regarding that?
+
+====================================================================================================
+
+Agent ID: NPC-10012
+----------------------------------------------------------------------------------------------------
+Name: ProfLuohanbin
+Bio: Luo Hanbin is an introverted professor who prefers small-group discussions.
+Goal: Seek out one or two colleagues for deep technical talks in quiet corners.
+
+Current State:
+- Buildings available: dessert shop, office, houseZ, park, office-1, office-2, office-3, store, restaurant, gym, houseZ-1, park-1, houseZ-2
+- People nearby: ZhangJiayuan, ProfChenWeiya, MaJiangping
+- Cash: 10000
+- Game Time: 1888746902.655
+
+Historical Actions (act_cache):
+  Action #1:
+    Equipment: bench
+    Operation: sit on the bench to focus on finding colleagues
+    Continue Time: 1800000 seconds
+    Result: The character sat on the bench to rest and felt better.
+  Action #2:
+    Equipment: slide
+    Operation: get up and use the slide to explore the area
+    Continue Time: 180000 seconds
+    Result: The character played the slide and felt happier.
+
+====================================================================================================
+
+Agent ID: NPC-10013
+----------------------------------------------------------------------------------------------------
+Name: ZhangJiayuan
+Bio: Zhang Jiayuan is an outgoing student who loves exploring public spaces.
+Goal: Roam the rest area to find classmates for group study sessions.
+
+Current State:
+- Buildings available: dessert shop, office, houseZ, park, office-1, office-2, office-3, store, restaurant, gym, houseZ-1, park-1, houseZ-2
+- People nearby: ProfLuohanbin
+- Cash: 10000
+- Game Time: 1888743384.615
+
+====================================================================================================
+
+Agent ID: NPC-10014
+----------------------------------------------------------------------------------------------------
+Name: WangZining
+Bio: Wang Zining is a serious student who keeps to herself.
+Goal: Head straight to the office and avoid idle chit-chat.
+
+Current State:
+- Buildings available: dessert shop, office, houseZ, park, office-1, office-2, office-3, store, restaurant, gym, houseZ-1, park-1, houseZ-2
+- People nearby: 
+- Cash: 10000
+- Game Time: 1888746902.655
+
+Historical Plans (plan_cache):
+  Plan #1:
+    Building: office
+    Purpose: go to the office to avoid idle chit-chat
+
+====================================================================================================
+
+Agent ID: NPC-10015
+----------------------------------------------------------------------------------------------------
+Name: MaJiangping
+Bio: Ma Jiangping is a curious student who enjoys spontaneous meetups.
+Goal: Wander through the corridor looking for chance encounters with peers.
+
+Current State:
+- Buildings available: dessert shop, office, houseZ, park, office-1, office-2, office-3, store, restaurant, gym, houseZ-1, park-1, houseZ-2
+- People nearby: ZhangJiayuan, ProfChenWeiya, ProfLuohanbin
+- Cash: 10000
+- Game Time: 1888746902.655
+
+Historical Actions (act_cache):
+  Action #1:
+    Equipment: bench
+    Operation: sitting on the bench
+    Continue Time: 6480000000 seconds
+    Result: Took a rest on the bench and felt better.
+  Action #2:
+    Equipment: slide
+    Operation: slide down the slide
+    Continue Time: 6480000000 seconds
+    Result: Played the slide and felt happier
+
+====================================================================================================
+
+Agent ID: NPC-10016
+----------------------------------------------------------------------------------------------------
+Name: CaiJianhua
+Bio: Cai Jianhua is a friendly administrator who chats while on duty.
+Goal: Deliver mail across offices and greet colleagues in the hallway.
+
+Current State:
+- Buildings available: dessert shop, office, houseZ, park, office-1, office-2, office-3, store, restaurant, gym, houseZ-1, park-1, houseZ-2
+- People nearby: MaJiangping
+- Cash: 10000
+- Game Time: 1888743384.615
+
+====================================================================================================
+
+Agent ID: NPC-10017
+----------------------------------------------------------------------------------------------------
+Name: LiWenpeng
+Bio: Li Wenpeng is a no-nonsense staff member focused on efficiency.
+Goal: Move directly between offices to complete tasks with minimal stops.
+
+Current State:
+- Buildings available: dessert shop, office, houseZ, park, office-1, office-2, office-3, store, restaurant, gym, houseZ-1, park-1, houseZ-2
+- People nearby: SongJunbo, ProfZhouCheng
+- Cash: 10000
+- Game Time: 1888746902.655
+
+Historical Actions (act_cache):
+  Action #1:
+    Equipment: worktop
+    Operation: Place worktop to set up workspace.
+    Continue Time: 1800000 seconds
+    Result: The character needs to retrieve food from the fridge nearby.
+  Action #2:
+    Equipment: worktop
+    Operation: organize workspace for efficient task completion
+    Continue Time: 1800000 seconds
+    Result: The character needs to retrieve food from the fridge nearby.
+
+====================================================================================================
+
+Agent ID: NPC-10018
+----------------------------------------------------------------------------------------------------
+Name: SongJunbo
+Bio: SongJunbo is a task-oriented scholar limiting social engagement to essentials, pursuing maximally efficient routes.
+Goal: Take shortest path from study room to advisor's office for thesis consultation while declining all non-essential interactions during transit.
+
+Current State:
+- Buildings available: dessert shop, office, houseZ, park, office-1, office-2, office-3, store, restaurant, gym, houseZ-1, park-1, houseZ-2
+- People nearby: SongJunbo, LiWenpeng
+- Cash: 10000
+- Game Time: 1888746902.655
+
+Historical Actions (act_cache):
+  Action #1:
+    Equipment: worktop
+    Operation: set worktop as platform
+    Continue Time: 648000000 seconds
+    Result: The character needs to retrieve food from the fridge nearby as they don't have any ingredients to cook.
+  Action #2:
+    Equipment: worktop
+    Operation: set worktop as platform
+    Continue Time: 6480000000 seconds
+    Result: The character needs to retrieve food from the fridge nearby as they don't have any ingredients to cook.
+  Action #3:
+    Equipment: worktop
+    Operation: set worktop as platform
+    Continue Time: 12960000000 seconds
+    Result: The character needs to retrieve food from the fridge nearby as they don't have any ingredients to cook.
+
+Historical Conversations (chat_cache):
+  Conversation #1:
+    Speaker: SongJunbo
+    Content: SongJunbo : ProfZhouCheng, how's your thesis research going?
+  Conversation #2:
+    Speaker: ProfZhouCheng
+    Content: ProfZhouCheng : I'm glad your thesis is progressing well! Let me know how I can help you today.
+  Conversation #3:
+    Speaker: SongJunbo
+    Content: SongJunbo : ProfZhouCheng, I have some thesis-related questions I'd like to discuss.
+  Conversation #4:
+    Speaker: ProfZhouCheng
+    Content: ProfZhouCheng : I'm happy to help with your thesis consultations! Let me know what questions you have.
+  Conversation #5:
+    Speaker: SongJunbo
+    Content: SongJunbo : Do you have any specific questions about your thesis that I can help clarify?
+  Conversation #6:
+    Speaker: ProfZhouCheng
+    Content: ProfZhouCheng : That sounds like a great idea! How can I assist you today?
+  Conversation #7:
+    Speaker: SongJunbo
+    Content: SongJunbo : I'm interested in exploring topics related to environmental sustainability. How can I assist you today?
+  Conversation #8:
+    Speaker: ProfZhouCheng
+    Content: ProfZhouCheng : That sounds interesting! How can I assist you today regarding environmental sustainability?
+  Conversation #9:
+    Speaker: SongJunbo
+    Content: SongJunbo : ProfZhouCheng, could you elaborate on the specific areas of your thesis research?
+  Conversation #10:
+    Speaker: ProfZhouCheng
+    Content: ProfZhouCheng : Sustainable building materials are a fascinating area! How can I assist you today regarding that?
+
+====================================================================================================

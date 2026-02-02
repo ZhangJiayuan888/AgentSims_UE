@@ -1,0 +1,46 @@
+{
+  "grid_size": 6,
+  "map_width": 144,
+  "map_height": 82,
+  "map": {
+    "79": { "1":{"building":1},"2":{"building":1},"3":{"building":1},"4":{"building":1},"5":{"building":1},"6":{"building":1} },
+    "80": { "1":{"building":1},"2":{"building":1},"3":{"building":1},"4":{"building":1},"5":{"building":1},"6":{"building":1} },
+    "81": { "1":{"building":1},"2":{"building":1},"3":{"building":1},"4":{"building":1},"5":{"building":1},"6":{"building":1} },
+    "82": { "1":{"building":1},"2":{"building":1},"3":{"building":1},"4":{"building":1},"5":{"building":1},"6":{"building":1} }
+  },
+  "buildings": [
+    {"id":1,"n":"dessert shop","t":3,"lx":79,"ty":7,"rx":99,"by":17,"r":0},
+    {"id":2,"n":"gym","t":4,"lx":80,"ty":23,"rx":98,"by":37,"r":0},
+    {"id":3,"n":"houseZ","t":5,"lx":45,"ty":64,"rx":63,"by":76,"r":0},
+    {"id":4,"n":"park","t":6,"lx":111,"ty":25,"rx":137,"by":36,"r":0}
+  ],
+  "equipments": [
+    {"id":1,"n":"counter","t":13,"lx":82,"ty":10,"rx":96,"by":11,"r":0,"b":1},
+    {"id":2,"n":"table","t":11,"lx":80,"ty":13,"rx":82,"by":14,"r":0,"b":1},
+    {"id":3,"n":"table","t":12,"lx":87,"ty":13,"rx":91,"by":14,"r":0,"b":1},
+    {"id":4,"n":"table","t":11,"lx":96,"ty":13,"rx":98,"by":14,"r":0,"b":1},
+    {"id":5,"n":"dessert shop gate","t":14,"lx":84,"ty":16,"rx":85,"by":16,"r":0,"b":1},
+    {"id":6,"n":"dessert shop gate","t":14,"lx":93,"ty":16,"rx":94,"by":16,"r":0,"b":1},
+    {"id":7,"n":"sports equipments","t":42,"lx":88,"ty":25,"rx":94,"by":25,"r":0,"b":2},
+    {"id":8,"n":"sports equipments","t":41,"lx":90,"ty":25,"rx":91,"by":27,"r":0,"b":2},
+    {"id":9,"n":"sports equipments","t":43,"lx":94,"ty":25,"rx":94,"by":26,"r":0,"b":2},
+    {"id":10,"n":"sports equipments","t":44,"lx":96,"ty":25,"rx":96,"by":25,"r":0,"b":2},
+    {"id":11,"n":"sports equipments","t":44,"lx":98,"ty":25,"rx":98,"by":25,"r":0,"b":2},
+    {"id":12,"n":"sports equipments","t":39,"lx":83,"ty":26,"rx":84,"by":26,"r":0,"b":2},
+    {"id":13,"n":"sports equipments","t":43,"lx":95,"ty":26,"rx":95,"by":27,"r":0,"b":2},
+    {"id":14,"n":"sports equipments","t":43,"lx":97,"ty":26,"rx":97,"by":27,"r":0,"b":2},
+    {"id":15,"n":"sports equipments","t":37,"lx":82,"ty":28,"rx":82,"by":30,"r":0,"b":2},
+    {"id":16,"n":"sports equipments","t":36,"lx":93,"ty":28,"rx":93,"by":28,"r":0,"b":2},
+    {"id":17,"n":"sports equipments","t":36,"lx":85,"ty":29,"rx":85,"by":29,"r":0,"b":2},
+    {"id":18,"n":"sports equipments","t":39,"lx":88,"ty":29,"rx":89,"by":29,"r":0,"b":2},
+    {"id":19,"n":"sports equipments","t":40,"lx":91,"ty":29,"rx":92,"by":30,"r":0,"b":2},
+    {"id":20,"n":"sports equipments","t":39,"lx":98,"ty":29,"rx":99,"by":29,"r":0,"b":2},
+    {"id":21,"n":"sports equipments","t":36,"lx":84,"ty":30,"rx":84,"by":30,"r":0,"b":2},
+    {"id":22,"n":"sports equipments","t":38,"lx":88,"ty":30,"rx":90,"by":30,"r":0,"b":2},
+    {"id":23,"n":"sports equipments","t":39,"lx":97,"ty":31,"rx":98,"by":31,"r":0,"b":2},
+    {"id":24,"n":"sports equipments","t":16,"lx":91,"ty":34,"rx":99,"by":34,"r":0,"b":2},
+    {"id":25,"n":"sports equipments","t":36,"lx":91,"ty":35,"rx":91,"by":35,"r":0,"b":2},
+    {"id":26,"n":"sports equipments","t":17,"lx":93,"ty":35,"rx":97,"by":35,"r":0,"b":2},
+    {"id":27,"n":"gym gate","t":15,"lx":91,"ty":37,"rx":93,"by":37,"r":0,"b":2}
+  ]
+}

@@ -1,0 +1,131 @@
+Simulation Log Summary - Generated on 2025-06-04 16:43:38
+Last Real Time: 1749026050579
+Last Game Time: 1749038840835
+Tick Count: 1
+====================================================================================================
+
+Agent ID: NPC-10001
+----------------------------------------------------------------------------------------------------
+Name: ProfChenWeiya
+Bio: Chen Weiya is a structural engineering professor who enjoys sparking conversations in the rest area.
+Goal: Wander the rest area after class to meet colleagues or students and discuss research.
+
+Current State:
+- Buildings available: dessert shop, office, houseZ, park, office-1, office-2, office-3
+- People nearby: ProfZhouCheng
+- Cash: 10000
+- Game Time: 1749030801.435
+
+====================================================================================================
+
+Agent ID: NPC-10002
+----------------------------------------------------------------------------------------------------
+Name: ProfZhouCheng
+Bio: Zhou Cheng is a civil engineering professor known for his engaging office hours.
+Goal: Hold impromptu Q&A sessions in the lounge to help students with their projects.
+
+Current State:
+- Buildings available: dessert shop, office, houseZ, park, office-1, office-2, office-3
+- People nearby: 
+- Cash: 10000
+- Game Time: 1749038840.835
+
+====================================================================================================
+
+Agent ID: NPC-10003
+----------------------------------------------------------------------------------------------------
+Name: ProfLuohanbin
+Bio: Luo Hanbin is an introverted professor who prefers small-group discussions.
+Goal: Seek out one or two colleagues for deep technical talks in quiet corners.
+
+Current State:
+- Buildings available: dessert shop, office, houseZ, park, office-1, office-2, office-3
+- People nearby: 
+- Cash: 10000
+- Game Time: 1749038840.835
+
+====================================================================================================
+
+Agent ID: NPC-10004
+----------------------------------------------------------------------------------------------------
+Name: ZhangJiayuan
+Bio: Zhang Jiayuan is an outgoing student who loves exploring public spaces.
+Goal: Roam the rest area to find classmates for group study sessions.
+
+Current State:
+- Buildings available: dessert shop, office, houseZ, park, office-1, office-2, office-3
+- People nearby: ProfLuohanbin
+- Cash: 10000
+- Game Time: 1749030801.435
+
+====================================================================================================
+
+Agent ID: NPC-10005
+----------------------------------------------------------------------------------------------------
+Name: WangZining
+Bio: Wang Zining is a serious student who keeps to herself.
+Goal: Head straight to the office and avoid idle chit-chat.
+
+Current State:
+- Buildings available: dessert shop, office, houseZ, park, office-1, office-2, office-3
+- People nearby: 
+- Cash: 10000
+- Game Time: 1749030801.435
+
+====================================================================================================
+
+Agent ID: NPC-10006
+----------------------------------------------------------------------------------------------------
+Name: MaJiangping
+Bio: Ma Jiangping is a curious student who enjoys spontaneous meetups.
+Goal: Wander through the corridor looking for chance encounters with peers.
+
+Current State:
+- Buildings available: dessert shop, office, houseZ, park, office-1, office-2, office-3
+- People nearby: ProfChenWeiya, ZhangJiayuan
+- Cash: 10000
+- Game Time: 1749038840.835
+
+====================================================================================================
+
+Agent ID: NPC-10007
+----------------------------------------------------------------------------------------------------
+Name: CaiJianhua
+Bio: Cai Jianhua is a friendly administrator who chats while on duty.
+Goal: Deliver mail across offices and greet colleagues in the hallway.
+
+Current State:
+- Buildings available: dessert shop, office, houseZ, park, office-1, office-2, office-3
+- People nearby: MaJiangping
+- Cash: 10000
+- Game Time: 1749030801.435
+
+====================================================================================================
+
+Agent ID: NPC-10008
+----------------------------------------------------------------------------------------------------
+Name: LiWenpeng
+Bio: Li Wenpeng is a no-nonsense staff member focused on efficiency.
+Goal: Move directly between offices to complete tasks with minimal stops.
+
+Current State:
+- Buildings available: dessert shop, office, houseZ, park, office-1, office-2, office-3
+- People nearby: SongJunbo
+- Cash: 10000
+- Game Time: 1749038840.835
+
+====================================================================================================
+
+Agent ID: NPC-10009
+----------------------------------------------------------------------------------------------------
+Name: SongJunbo
+Bio: SongJunbo is a task-oriented scholar limiting social engagement to essentials, pursuing maximally efficient routes.
+Goal: Take shortest path from study room to advisor's office for thesis consultation while declining all non-essential interactions during transit.
+
+Current State:
+- Buildings available: dessert shop, office, houseZ, park, office-1, office-2, office-3
+- People nearby: LiWenpeng
+- Cash: 10000
+- Game Time: 1749038840.835
+
+====================================================================================================
