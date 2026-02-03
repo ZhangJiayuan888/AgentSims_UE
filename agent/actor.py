@@ -2,7 +2,7 @@ from typing import List, Dict, Any
 from agent.agent.agent import Agent
 import datetime
 import random
-import traceback  # 用于打印报错堆栈
+import traceback
 
 
 class Actor:
@@ -15,25 +15,81 @@ class Actor:
 
     def from_json(self, obj: Dict[str, Any]):
         self.agent.from_json(obj)
+        # --- V6关键：加载后立即执行全量清洗 (含长期经验) ---
+        self._clean_history()
+        self._clean_experiences()
         return self
 
     def to_json(self) -> Dict[str, Any]:
         return self.agent.to_json()
 
-    # --- 修复：更智能的数据清洗函数 ---
+    # --- V6新增：清洗长期经验记忆 (Experience Sanitizer) ---
+    def _clean_experiences(self):
+        """
+        清洗 memory_data 中的 experience，防止从长期记忆中提取出天文数字。
+        """
+        if not hasattr(self.agent.memory_data, 'experience'):
+            return
+
+        for exp_id, exp_data in self.agent.memory_data.experience.items():
+            if "acts" in exp_data and isinstance(exp_data["acts"], list):
+                cleaned_acts = []
+                for act in exp_data["acts"]:
+                    if not isinstance(act, dict): continue
+
+                    # 清洗时间
+                    raw_time = act.get("continue_time", 60)
+                    try:
+                        c_time = float(raw_time)
+                    except:
+                        c_time = 60
+
+                    if c_time > 14400:  # > 4 hours
+                        act["continue_time"] = 3600
+                        if "result" in act:
+                            act["result"] = str(act["result"]) + " (Exp Corrected)"
+
+                    cleaned_acts.append(act)
+                exp_data["acts"] = cleaned_acts
+
+    # --- 强力历史清洗 ---
+    def _clean_history(self):
+        """
+        在 Agent 思考前，清洗 act_cache (短期记忆)。
+        """
+        if not hasattr(self.agent.cache, 'act_cache') or not self.agent.cache.act_cache:
+            return
+
+        cleaned = []
+        for act in self.agent.cache.act_cache:
+            if not isinstance(act, dict): continue
+
+            # 丢弃 Plan 格式脏数据
+            if "building" in act or "purpose" in act:
+                continue
+
+            raw_time = act.get("continue_time", 60)
+            try:
+                c_time = float(raw_time)
+            except:
+                c_time = 60
+
+            if c_time > 14400:
+                act["continue_time"] = 3600
+                if "result" in act:
+                    act["result"] = str(act["result"]) + " (System Corrected)"
+
+            cleaned.append(act)
+        self.agent.cache.act_cache = cleaned
+
+    # --- 状态回写式清洗 ---
     def _sanitize_result(self, result_dict: Dict[str, Any]) -> Dict[str, Any]:
-        """
-        强制清洗返回结果，防止数值溢出和格式错误
-        """
-        # 如果是聊天动作，直接返回，不要强行添加 use，否则会导致系统混淆
         if "chat" in result_dict:
             return result_dict
 
-        # 1. 确保 use 字典存在
         if "use" not in result_dict:
-            result_dict["use"] = {"continue_time": 60, "result": "Action verified by system."}
+            result_dict["use"] = {"continue_time": 60, "result": "Action verified."}
 
-        # 2. 强制钳位时间 (Clamping)
         raw_time = result_dict["use"].get("continue_time", 60)
         final_time = 60
         try:
@@ -41,24 +97,37 @@ class Actor:
         except:
             final_time = 60
 
-        # 核心修复：防止天文数字
-        if final_time > 14400:  # 超过 4 小时
-            final_time = 3600  # 强制设为 1 小时
-            result_dict["use"]["result"] = str(result_dict["use"].get("result", "")) + " (System: Duration shortened)"
+        if final_time > 14400:  # > 4 hours
+            final_time = 3600
+            result_dict["use"]["result"] = str(result_dict["use"].get("result", "")) + " (Time limited)"
         elif final_time < 1:
             final_time = 60
 
         result_dict["use"]["continue_time"] = final_time
 
-        # 3. 确保 equipment 是字符串
+        eq_val = ""
         if "equipment" in result_dict:
             eq = result_dict["equipment"]
             if isinstance(eq, list):
-                result_dict["equipment"] = str(eq[0]) if len(eq) > 0 else ""
+                eq_val = str(eq[0]) if len(eq) > 0 else ""
             elif eq is None:
-                result_dict["equipment"] = ""
-            elif not isinstance(eq, str):
-                result_dict["equipment"] = str(eq)
+                eq_val = ""
+            else:
+                eq_val = str(eq)
+        result_dict["equipment"] = eq_val
+
+        # 回写状态
+        if self.agent.state.use is None:
+            self.agent.state.use = {}
+        self.agent.state.use["continue_time"] = final_time
+        self.agent.state.use["result"] = result_dict["use"]["result"]
+        if "bought_thing" not in self.agent.state.use:
+            self.agent.state.use["bought_thing"] = ""
+        if "amount" not in self.agent.state.use:
+            self.agent.state.use["amount"] = 0
+
+        if self.agent.state.act and isinstance(self.agent.state.act, dict):
+            self.agent.state.act["continue_time"] = final_time
 
         return result_dict
 
@@ -78,7 +147,11 @@ class Actor:
             self.agent.state.game_time = datetime.datetime.fromtimestamp(
                 data.get("game_time", datetime.datetime.now().timestamp() * 1000) / 1000)
 
-            # 分发逻辑
+            # --- 全量清洗 (短期 + 长期) ---
+            self._clean_history()
+            self._clean_experiences()
+            # ---------------------------
+
             source = observation['source']
             if source == 'timetick-finishMoving':
                 ret_dict["data"] = await self._act()
@@ -105,17 +178,14 @@ class Actor:
             ret_dict["status"] = 200
 
         except Exception as e:
-            # 捕获所有异常，防止 self.using 锁死
             print(f"CRITICAL ERROR in actor {self.agent.name}: {e}")
             traceback.print_exc()
             ret_dict["status"] = 500
             ret_dict["message"] = f"Internal Error: {str(e)}"
-            # 尝试返回一个兜底的空动作，防止前端崩溃
             ret_dict["data"] = {"use": {"continue_time": 60, "result": "System Error Recovered"}, "equipment": "",
                                 "operation": "Wait"}
 
         finally:
-            # --- 关键修复：无论发生什么，必须释放锁 ---
             self.using = False
 
         return ret_dict
@@ -127,7 +197,6 @@ class Actor:
             self.agent.cache.experience_cache = acts
 
             if not act:
-                # 递归调用 _act，结果也需要清洗
                 return self._sanitize_result(await self._act())
 
             raw_result = {
@@ -164,12 +233,21 @@ class Actor:
     async def _act(self) -> Dict[str, Any]:
         await self.agent.act()
         if self.agent.state.act:
+            if "building" in self.agent.state.act or "purpose" in self.agent.state.act:
+                print(f"Warning: Agent {self.agent.name} hallucinated PLAN format in ACT phase. Forcing correction.")
+                self.agent.state.act = {"action": "use", "equipment": "",
+                                        "operation": "Think (Format Error Correction)"}
+
             action = self.agent.state.act.get("action", "")
 
-            # 死循环检测
             current_signature = f"{action}"
+            current_target = ""
             if action == "use":
-                current_signature += f":{self.agent.state.act.get('equipment')}:{self.agent.state.act.get('operation')}"
+                current_target = self.agent.state.act.get('equipment', "")
+            elif action == "chat":
+                current_target = self.agent.state.act.get('person', "")
+
+            current_signature = f"{action}:{current_target}"
 
             if current_signature == self.last_action_signature:
                 self.fail_count += 1
@@ -177,11 +255,11 @@ class Actor:
                 self.fail_count = 0
             self.last_action_signature = current_signature
 
-            if self.fail_count >= 3:
+            if self.fail_count >= 5:
                 print(f"DEBUG: Breaking loop for {self.agent.name}")
                 self.fail_count = 0
                 return self._sanitize_result({
-                    "use": {"continue_time": 60, "result": "Confusion cleared. Stopping to rethink."},
+                    "use": {"continue_time": 60, "result": "I seem to be stuck. I will stop and rethink."},
                     "equipment": "",
                     "operation": "Wait"
                 })
@@ -190,7 +268,6 @@ class Actor:
                 equipment = self.agent.state.act.get("equipment", "")
                 operation = self.agent.state.act.get("operation", "")
 
-                # 类型清洗
                 if isinstance(equipment, list):
                     equipment = str(equipment[0]) if len(equipment) > 0 else ""
                 elif equipment is None:
@@ -198,7 +275,6 @@ class Actor:
                 else:
                     equipment = str(equipment)
 
-                # 模糊查找
                 target_equip_obj = None
                 for e in self.agent.state.equipments:
                     if equipment == e["name"]:
@@ -210,28 +286,31 @@ class Actor:
                             target_equip_obj = e
                             break
 
+                description = ""
+                menu = dict()
                 if target_equip_obj:
                     description = target_equip_obj.get("description", "")
                     menu = target_equip_obj.get("menu", dict())
                 else:
                     return self._sanitize_result({
-                        "use": {"continue_time": 60, "result": f"Could not find {equipment}."},
+                        "use": {"continue_time": 60, "result": f"Could not find equipment {equipment}."},
                         "equipment": equipment,
                         "operation": operation
                     })
 
                 await self.agent.use(equipment, operation, description, menu)
 
-                # 逻辑拦截 (Gate/Worktop)
                 op_lower = operation.lower()
                 eq_lower = equipment.lower()
 
-                if "gate" in eq_lower and ("buy" in op_lower or "check" in op_lower):
-                    self.agent.state.use["result"] = "This is a door. Please enter inside."
+                if "gate" in eq_lower and ("buy" in op_lower or "check" in op_lower or "open" in op_lower):
+                    self.agent.state.use["result"] = "This is just a door. Enter inside."
                     self.agent.state.use["bought_thing"] = ""
 
-                if ("worktop" in eq_lower or "table" in eq_lower) and ("laptop" in op_lower or "path" in op_lower):
-                    self.agent.state.use["result"] = "Cannot work here. Find a Desk."
+                if ("worktop" in eq_lower or "table" in eq_lower) and (
+                        "laptop" in op_lower or "work" in op_lower or "thesis" in op_lower):
+                    self.agent.state.use["result"] = "You CANNOT use a laptop here. Find a Desk."
+                    self.agent.state.use["continue_time"] = 60
 
                 if self.agent.state.use.get("bought_thing") in menu and isinstance(self.agent.state.use.get("amount"),
                                                                                    (int, float)):
@@ -247,12 +326,27 @@ class Actor:
 
                 if person not in self.agent.state.people:
                     return self._sanitize_result({
-                        "use": {"continue_time": 60, "result": f"{person} is not here."},
+                        "use": {"continue_time": 60, "result": f"No one named {person} is here."},
                         "equipment": "",
                         "operation": "Wait"
                     })
 
+                if person == self.agent.name:
+                    return self._sanitize_result({
+                        "use": {"continue_time": 60, "result": "I am talking to myself."},
+                        "equipment": "",
+                        "operation": "Think"
+                    })
+
                 await self.agent.chat(person, topic)
+
+                if not self.agent.state.chat:
+                    return self._sanitize_result({
+                        "use": {"continue_time": 60, "result": "Mind blank. Stopped chatting."},
+                        "equipment": "",
+                        "operation": "Think"
+                    })
+
                 return {"chat": self.agent.state.chat, "person": person, "topic": topic}
 
             elif action == "experience":
@@ -277,15 +371,18 @@ class Actor:
                 return self._sanitize_result(raw_ret)
 
             else:
-                # 兜底未知动作
+                print(f"Unknown action: {action}. Forcing correction.")
+                self.agent.state.act = {"action": "use", "equipment": "", "operation": "Wait (Unknown Action)"}
                 return self._sanitize_result({
-                    "use": {"continue_time": 60, "result": "Unknown action, waiting."},
+                    "use": {"continue_time": 60, "result": "Unknown action."},
                     "equipment": "",
                     "operation": "Wait"
                 })
 
     async def _chat(self, person: str, topic: str) -> Dict[str, Any]:
         await self.agent.chat(person, topic)
+        if not self.agent.state.chat:
+            self.agent.state.chat = "..."
         return {"chat": self.agent.state.chat, "person": person, "topic": topic}
 
     def _addBuilding(self, building_name: str):
