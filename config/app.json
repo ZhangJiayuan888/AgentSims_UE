@@ -2,7 +2,7 @@
   "version": "0.0.1",
   "online": false,
   "tick_cooldown": 1500,
-  "tick_count_limit": 300000,
+  "tick_count_limit": 3000000,
   "mayor_cooldown": 1500,
   "mayor_count_limit": 300,
   "cooldown": 0.5,     

@@ -1,43 +1,255 @@
 {
-"assets":[
-"premade_01",
-"premade_02",
-"premade_03",
-"premade_04",
-"premade_05",
-"premade_06",
-"premade_07",
-"premade_08",
-"premade_09",
-"premade_10",
-"premade_11",
-"premade_12",
-"premade_13",
-"premade_14",
-"premade_15",
-"premade_16",
-"premade_17",
-"premade_18",
-"premade_19",
-"premade_20",
-"premade_21",
-"premade_22",
-"premade_23",
-"premade_24",
-"premade_25",
-"premade_26"
-],
-"models":[
-"gpt-4",
-"gpt-3.5",
-"deepseek-ai/DeepSeek-R1-Distill-Qwen-7B",
-"glm-4-flash"
-],
-"memorySystems":[
-"LongShortTermMemories"
-],
-"planSystems":[
-"QAFramework",
-"JustPlan"
-]
+  "assets": [
+    "premade_01",
+    "premade_02",
+    "premade_03",
+    "premade_04",
+    "premade_05",
+    "premade_06",
+    "premade_07",
+    "premade_08",
+    "premade_09",
+    "premade_10",
+    "premade_11",
+    "premade_12",
+    "premade_13",
+    "premade_14",
+    "premade_15",
+    "premade_16",
+    "premade_17",
+    "premade_18",
+    "premade_19",
+    "premade_20",
+    "premade_21",
+    "premade_22",
+    "premade_23",
+    "premade_24",
+    "premade_25",
+    "premade_26"
+  ],
+  "models": [
+    "gpt-4",
+    "gpt-3.5",
+    "deepseek-ai/DeepSeek-R1-Distill-Qwen-7B",
+    "glm-4-flash"
+  ],
+  "memorySystems": [
+    "LongShortTermMemories"
+  ],
+  "planSystems": [
+    "QAFramework",
+    "JustPlan"
+  ],
+  "npcs": [
+    {
+      "id": 10001,
+      "name": "SongJunbo",
+      "asset": "premade_01",
+      "bio": "A PhD candidate in Physics. Extremely task-oriented and sensitive to noise. Prefers absolute silence to derive formulas.",
+      "goal": "Go to the quietest corner of HouseZ to work on the dissertation for 4 hours. Reject any social interactions."
+    },
+    {
+      "id": 10002,
+      "name": "Prof_Chen",
+      "asset": "premade_02",
+      "bio": "An Associate Professor of Architecture researching educational spaces. Likes to observe how students use furniture.",
+      "goal": "Patrol from Office to Dessert Shop and Park, observing student behaviors and taking notes. Do not stay in one place for too long."
+    },
+    {
+      "id": 10003,
+      "name": "Li_Hua",
+      "asset": "premade_03",
+      "bio": "President of the Student Union. Very social and energetic. Needs to meet many people to coordinate upcoming events.",
+      "goal": "Wander around the Park and Dessert Shop to find students and discuss the campus festival. Initiate conversations actively."
+    },
+    {
+      "id": 10004,
+      "name": "Zhang_Wei",
+      "asset": "premade_04",
+      "bio": "A computer science undergraduate. Needs a power outlet for his laptop and caffeine to stay awake. Introverted.",
+      "goal": "Sit at the Dessert Shop counter, buy a coffee, and code for 3 hours. Only interact if someone asks about the code."
+    },
+    {
+      "id": 10005,
+      "name": "Wang_Fang",
+      "asset": "premade_05",
+      "bio": "A literature student looking for inspiration. Likes natural light and scenic views. Dislikes artificial air conditioning.",
+      "goal": "Find a bench in the Park to read poetry aloud softly. If it rains or gets too hot, move to the window seat in HouseZ."
+    },
+    {
+      "id": 10006,
+      "name": "Team_Lead_Mike",
+      "asset": "premade_06",
+      "bio": "Leader of a startup competition team. Aggressive and loud. Needs a large table to spread out blueprints.",
+      "goal": "Occupy the largest table in the Dessert Shop and wait for team members to hold a strategy meeting."
+    },
+    {
+      "id": 10007,
+      "name": "Team_Mem_Sarah",
+      "asset": "premade_07",
+      "bio": "Member of Mike's startup team. Follows the leader but gets anxious in crowded places.",
+      "goal": "Go to the Dessert Shop to meet Mike for the group discussion. Try to focus despite the background noise."
+    },
+    {
+      "id": 10008,
+      "name": "Zhao_Lei",
+      "asset": "premade_08",
+      "bio": "A medical student preparing for finals. Carrying heavy books. Needs a ergonomic chair and good lighting.",
+      "goal": "Find a proper desk in HouseZ to memorize anatomy. If HouseZ is full, go to the Office to ask for a temporary spot."
+    },
+    {
+      "id": 10009,
+      "name": "Sun_Ying",
+      "asset": "premade_09",
+      "bio": "A freshman feeling lonely. Looking for opportunities to make new friends.",
+      "goal": "Walk around the Park and Dessert Shop, looking for approachable people to chat with about campus life."
+    },
+    {
+      "id": 10010,
+      "name": "Admin_Liu",
+      "asset": "premade_10",
+      "bio": "University administrator. Strict about rules. Checks if students are sleeping in non-sleeping areas.",
+      "goal": "Patrol HouseZ and the Office to ensure order. Return to the Office to file reports."
+    },
+    {
+      "id": 10011,
+      "name": "Gamer_Tom",
+      "asset": "premade_11",
+      "bio": "Using the campus wifi to download game updates. Just needs a place to sit and wait.",
+      "goal": "Sit on any available bench in the Park or HouseZ and play on the phone while waiting for downloads."
+    },
+    {
+      "id": 10012,
+      "name": "Design_Student_A",
+      "asset": "premade_12",
+      "bio": "Architecture student making a physical model. Needs a flat surface and doesn't mind making a mess.",
+      "goal": "Use a table in HouseZ to cut papers and glue models. Collaborate with Design_Student_B."
+    },
+    {
+      "id": 10013,
+      "name": "Design_Student_B",
+      "asset": "premade_13",
+      "bio": "Partner of Student A. Critical and vocal. Likes to debate design choices.",
+      "goal": "Join Student A in HouseZ to critique the model. Engage in a heated debate about structure."
+    },
+    {
+      "id": 10014,
+      "name": "Coffee_Lover",
+      "asset": "premade_14",
+      "bio": "Comes to the campus cafe strictly for the quality of beans. A connoisseur.",
+      "goal": "Go to the Dessert Shop, order the most expensive item, and savor it slowly while judging the ambiance."
+    },
+    {
+      "id": 10015,
+      "name": "Sleepy_Student",
+      "asset": "premade_15",
+      "bio": "Pulled an all-nighter. Just wants a soft surface to nap for 20 minutes.",
+      "goal": "Find a sofa in the Dessert Shop or a secluded bench in the Park to take a nap."
+    },
+    {
+      "id": 10016,
+      "name": "Tutor_John",
+      "asset": "premade_16",
+      "bio": "A peer tutor helping others with Calculus. Patient and articulate.",
+      "goal": "Wait in HouseZ or the Dessert Shop for students who need help with math problems."
+    },
+    {
+      "id": 10017,
+      "name": "Mentee_Alice",
+      "asset": "premade_17",
+      "bio": "Struggling with Calculus. Anxious and looking for the tutor.",
+      "goal": "Search for Tutor_John in HouseZ or Dessert Shop to ask for help with homework."
+    },
+    {
+      "id": 10018,
+      "name": "Couple_Boy",
+      "asset": "premade_18",
+      "bio": "Dating Couple_Girl. Wants to find a romantic spot but also pretends to study.",
+      "goal": "Find a private table in the Dessert Shop or a bench in the Park to chat with Couple_Girl."
+    },
+    {
+      "id": 10019,
+      "name": "Couple_Girl",
+      "asset": "premade_19",
+      "bio": "Dating Couple_Boy. Wants to take selfies and enjoy dessert.",
+      "goal": "Go to the Dessert Shop with Couple_Boy to share a cake and take photos."
+    },
+    {
+      "id": 10020,
+      "name": "Library_Rat",
+      "asset": "premade_20",
+      "bio": "Usually lives in the library, but it's closed. Reluctantly using the informal spaces.",
+      "goal": "Find the spot in HouseZ that most resembles a library cubicle and study intensely."
+    },
+    {
+      "id": 10021,
+      "name": "Music_Student",
+      "asset": "premade_21",
+      "bio": "Listening to classical music on headphones. Humming occasionally. Needs mental relaxation.",
+      "goal": "Walk slowly through the Park to clear the mind, then sit in HouseZ to review music sheets."
+    },
+    {
+      "id": 10022,
+      "name": "Thesis_Panic",
+      "asset": "premade_22",
+      "bio": "Deadline is tomorrow. extremely stressed. Typing furiously.",
+      "goal": "Rush to the Office to catch the advisor, if not there, sprint to HouseZ to finish writing."
+    },
+    {
+      "id": 10023,
+      "name": "Visitor_Parent",
+      "asset": "premade_23",
+      "bio": "Visiting their child at university. Curious and looking around.",
+      "goal": "Walk through all buildings (Park -> HouseZ -> Dessert Shop) to inspect the facilities."
+    },
+    {
+      "id": 10024,
+      "name": "Yoga_Girl",
+      "asset": "premade_24",
+      "bio": "Likes to stretch and meditate. Needs open space.",
+      "goal": "Go to the open grass area in the Park to meditate for an hour."
+    },
+    {
+      "id": 10025,
+      "name": "Phone_Call_Guy",
+      "asset": "premade_25",
+      "bio": "Taking a loud business call. Oblivious to others.",
+      "goal": "Pace around the Park or HouseZ while talking loudly on the phone about a project."
+    },
+    {
+      "id": 10026,
+      "name": "Sketching_Artist",
+      "asset": "premade_26",
+      "bio": "Art student sketching people in motion. Needs a good vantage point.",
+      "goal": "Sit in a corner of the Dessert Shop to sketch the customers coming and going."
+    },
+    {
+      "id": 10027,
+      "name": "Lost_Freshman",
+      "asset": "premade_01",
+      "bio": "Can't find the classroom. Confused and looking at the map.",
+      "goal": "Wander between Office and HouseZ, asking anyone for directions."
+    },
+    {
+      "id": 10028,
+      "name": "Grad_Student_X",
+      "asset": "premade_02",
+      "bio": "Analyzing data. Needs a large monitor (imaginary) or desk space.",
+      "goal": "Camp out at a large table in HouseZ for the entire afternoon."
+    },
+    {
+      "id": 10029,
+      "name": "Interview_Candidate",
+      "asset": "premade_03",
+      "bio": "Preparing for a job interview. Practicing answers silently.",
+      "goal": "Sit in the Park to practice self-introduction, then go to the Office for the mock interview."
+    },
+    {
+      "id": 10030,
+      "name": "Janitor_Bob",
+      "asset": "premade_04",
+      "bio": "Cleaning staff. Knows every corner of the campus. Friendly.",
+      "goal": "Move between all buildings to 'inspect' cleanliness and greet students."
+    }
+  ]
 }
