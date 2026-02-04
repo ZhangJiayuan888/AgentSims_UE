@@ -130,15 +130,29 @@ class Tick(CommandBase):
                 "game_time": self.app.last_game_time,
             }}
             result = await self.app.actors[target_actor_id].react(info)
+
+            # --- Fix: Enhanced chat content parsing ---
+            content = "..."
             try:
-                content = result["data"]['chat']['content']
-            except (KeyError, TypeError):
-                if 'content' not in self.app.actors[target_actor_id].agent.state.chat:
-                    # Fix: Removed remote_pdb
-                    print(f"[Warn] Chat content missing for {target_actor_id}")
-                    content = "..."
-                else:
+                # 1. Try standard path first
+                if result.get("data") and "chat" in result["data"]:
+                    chat_data = result["data"]["chat"]
+                    if isinstance(chat_data, dict):
+                        content = chat_data.get("content", "...")
+                    elif isinstance(chat_data, str):
+                        content = chat_data
+                # 2. Check agent state if data missing
+                elif 'content' in self.app.actors[target_actor_id].agent.state.chat:
                     content = self.app.actors[target_actor_id].agent.state.chat
+
+                # 3. Clean DeepSeek <think> tags if present
+                if isinstance(content, str) and "<think>" in content:
+                    content = content.split("</think>")[-1].strip()
+
+            except Exception as e:
+                print(f"[Warn] Failed to parse chat content for {target_actor_id}: {e}")
+                content = "..."
+            # ------------------------------------------
 
             # Fix: Ensure content format "Speaker: Message" to satisfy NPCModel assertion
             if not isinstance(content, str): content = str(content)
@@ -172,7 +186,8 @@ class Tick(CommandBase):
                       {"code": 200, "uri": "NPC-React", "uid": uid, "data": {"uid": uid, "reaction": result}})
 
         # Fix: Ensure result['data'] is not None to prevent TypeError
-        if result.get("data") is None:
+        if not result or result.get("data") is None:
+            # print(f"[Warn] Result data is None for {uid}. Skipping reaction parsing.")
             result["data"] = {}
 
         if "newPlan" in result["data"]:
@@ -196,7 +211,15 @@ class Tick(CommandBase):
             curLocation = map_model.map.get(str(entity_model.x), dict()).get(str(entity_model.y), dict()).get(
                 "building")
             if curLocation:
-                curLocation = buildings_model.get_building(int(curLocation)).get('n', "")
+                # --- Fix: Check for building existence to prevent AttributeError ---
+                building_data = buildings_model.get_building(int(curLocation))
+                if building_data:
+                    curLocation = building_data.get('n', "")
+                else:
+                    print(f"[Warn] Map indicates building ID {curLocation} but it is missing in BuildingsModel config.")
+                    curLocation = ""
+                # -----------------------------------------------------------------
+
             # print("location:", location, "curLocation:", curLocation)
             if location != curLocation:
                 # moving
