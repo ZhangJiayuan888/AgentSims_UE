@@ -15,7 +15,8 @@ class Actor:
 
     def from_json(self, obj: Dict[str, Any]):
         self.agent.from_json(obj)
-        # --- V6关键：加载后立即执行全量清洗 (含长期经验) ---
+        # --- V7关键：加载时清洗“当前正在进行”的状态，防止时钟锁死 ---
+        self._clean_active_state()
         self._clean_history()
         self._clean_experiences()
         return self
@@ -23,11 +24,27 @@ class Actor:
     def to_json(self) -> Dict[str, Any]:
         return self.agent.to_json()
 
-    # --- V6新增：清洗长期经验记忆 (Experience Sanitizer) ---
+    # --- V7新增：清洗当前活跃状态 (Active State Sanitizer) ---
+    def _clean_active_state(self):
+        """
+        检查 Agent 当前是否正处于一个时间异常的动作中。
+        如果是，强制结束该动作，以便 Tick 系统能释放 Agent，再次调用 react。
+        """
+        if self.agent.state.use:
+            raw_time = self.agent.state.use.get("continue_time", 0)
+            try:
+                c_time = float(raw_time)
+            except:
+                c_time = 0
+
+            # 如果当前动作剩余时间超过 4 小时，强制归零或设为极短
+            if c_time > 14400:
+                print(f"Force unlocking agent {self.agent.name}: {c_time}s -> 1s")
+                self.agent.state.use["continue_time"] = 1  # 设为1秒，让他立刻结束
+                self.agent.state.use["result"] = str(self.agent.state.use.get("result", "")) + " (System Unlocked)"
+
+    # --- 清洗长期经验记忆 ---
     def _clean_experiences(self):
-        """
-        清洗 memory_data 中的 experience，防止从长期记忆中提取出天文数字。
-        """
         if not hasattr(self.agent.memory_data, 'experience'):
             return
 
@@ -36,37 +53,28 @@ class Actor:
                 cleaned_acts = []
                 for act in exp_data["acts"]:
                     if not isinstance(act, dict): continue
-
-                    # 清洗时间
                     raw_time = act.get("continue_time", 60)
                     try:
                         c_time = float(raw_time)
                     except:
                         c_time = 60
 
-                    if c_time > 14400:  # > 4 hours
+                    if c_time > 14400:
                         act["continue_time"] = 3600
                         if "result" in act:
                             act["result"] = str(act["result"]) + " (Exp Corrected)"
-
                     cleaned_acts.append(act)
                 exp_data["acts"] = cleaned_acts
 
     # --- 强力历史清洗 ---
     def _clean_history(self):
-        """
-        在 Agent 思考前，清洗 act_cache (短期记忆)。
-        """
         if not hasattr(self.agent.cache, 'act_cache') or not self.agent.cache.act_cache:
             return
 
         cleaned = []
         for act in self.agent.cache.act_cache:
             if not isinstance(act, dict): continue
-
-            # 丢弃 Plan 格式脏数据
-            if "building" in act or "purpose" in act:
-                continue
+            if "building" in act or "purpose" in act: continue
 
             raw_time = act.get("continue_time", 60)
             try:
@@ -147,10 +155,11 @@ class Actor:
             self.agent.state.game_time = datetime.datetime.fromtimestamp(
                 data.get("game_time", datetime.datetime.now().timestamp() * 1000) / 1000)
 
-            # --- 全量清洗 (短期 + 长期) ---
+            # --- 执行清洗 ---
             self._clean_history()
             self._clean_experiences()
-            # ---------------------------
+            self._clean_active_state()  # 运行时也检查一下
+            # ------------------
 
             source = observation['source']
             if source == 'timetick-finishMoving':
