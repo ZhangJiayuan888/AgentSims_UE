@@ -27,7 +27,20 @@ class LoginBase(CommandBase):
         npc_model.save()
 
         # buildings_model = self.get_single_model("Buildings", create=False)
-        buildings = ["dessert shop", "office", "houseZ", "park"]
+        buildings = [
+            "supply_station",  # ID 1: 物资站/小卖部
+            "cafeteria",  # ID 2: 食堂
+            "collaboration_zone",  # ID 3: 协作讨论区 (原 dessert shop)
+            "wellness_room",  # ID 4: 健身/恢复室 (原 gym)
+            "quiet_study_room",  # ID 5: 安静自习室 (原 houseZ)
+            "indoor_atrium",  # ID 6: 室内中庭 (原 park)
+            "seminar_room_B",  # ID 7: 研讨室 B
+            "faculty_office",  # ID 8: 教职工办公室
+            "exhibition_hall",  # ID 9: 展览大厅 (原 museum)
+            "seminar_room_A",  # ID 10: 研讨室 A
+            "seminar_room_C",  # ID 11: 研讨室 C
+            "lounge_area"  # ID 12: 休闲休息区 (原 cafe)
+        ]
 
         # 自定义模型配置
         model = "deepseek-ai/DeepSeek-R1-Distill-Qwen-7B"

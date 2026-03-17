@@ -39,4 +39,3 @@ If you decide to chat with someone, tell me with JSON format as follows: (who yo
 "person" : "...",
 "topic" : "..."
 }
-
