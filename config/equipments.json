@@ -5,10 +5,10 @@
     "width": 2,
     "height": 3,
     "assets": "counter-2-3",
-    "description": "This is the counter of a store. The game character can only buy one type of things on the menu at this store. If the customer wants something on the menu, the continue_ Time is 0.5 hours, the bought_thing is the thing he/she bought, the amount is a number of the quantity he/she needs, and the result is tell the character that he bought this kind of goods and the amount and say thank you for coming. If the character wants more than one type of things on the menu, the continue_ Time is 0.5 hours, the result is to tell him/her he/she should choose one thing to buy at once. If a game character's action here is not to purchase a specific goods, The continue_ Time is 0.5 hours, the result is to tell the character to specify what goods he/she needs and tell him the menu, without spending any money. If the customer want something else, the continue_ Time is 0.5 hours, the result is to tell him we don't sell this and say sorry, without spending any money.",
+    "description": "Supply station counter. Characters can buy stationery or quick snacks here. If they need items, they should specify what they need. If what they want is available, the continue_Time is 0.5 hours and they will be served.",
     "functions": [
-      {"earn": 200, "cost": 0, "action": "Sell goods", "onlyOwner": true},
-      {"earn": 10, "cost": 200, "action": "Buy goods", "onlyOwner": false}
+      {"earn": 200, "cost": 0, "action": "Sell items", "onlyOwner": true},
+      {"earn": 10, "cost": 200, "action": "Buy snacks/stationery", "onlyOwner": false}
     ],
     "economic": 1,
     "hireCapacity": 0,
@@ -16,78 +16,78 @@
   },
   {
     "id": 2,
-    "type": "goods",
+    "type": "study_materials",
     "width": 2,
     "height": 3,
     "assets": "goods-2-3",
-    "description": "There are a variety of goods here. If some game character take operation with this equipment, they cannot just take the goods away. If they want to buy something, they should go to the counter and pay the money. The continue_time is 0.5 hours, the result is to tell the charater if they want to buy something, then go to the counter and pay. They will not cost any money here.",
+    "description": "Bookshelves and display racks with study materials. If a character wants to borrow or buy materials, they must go to the nearby counter. The continue_time is 0.5 hours.",
     "functions": [
-      {"earn": 200, "cost": 0, "action": "Carry goods", "onlyOwner": false}
+      {"earn": 200, "cost": 0, "action": "Borrow materials", "onlyOwner": false}
     ],
     "hireCapacity": 0,
     "livingCapacity": 0
   },
   {
     "id": 3,
-    "type": "goods",
+    "type": "study_materials",
     "width": 2,
     "height": 1,
     "assets": "goods-2-1",
-    "description": "There are a variety of goods here. If some game character take operation with this equipment, they cannot just take the goods away. If they want to buy something, they should go to the counter and pay the money. The continue_time is 0.5 hours, the result is to tell the charater if they want to buy something, then go to the counter and pay. They will not cost any money here.",
+    "description": "Bookshelves and display racks with study materials. If a character wants to borrow or buy materials, they must go to the nearby counter. The continue_time is 0.5 hours.",
     "functions": [
-      {"earn": 200, "cost": 0, "action": "Carry goods", "onlyOwner": false}
+      {"earn": 200, "cost": 0, "action": "Borrow materials", "onlyOwner": false}
     ],
     "hireCapacity": 0,
     "livingCapacity": 0
   },
   {
     "id": 4,
-    "type": "goods",
+    "type": "study_materials",
     "width": 7,
     "height": 1,
     "assets": "goods-7-1",
-    "description": "There are a variety of goods here. If some game character take operation with this equipment, they cannot just take the goods away. If they want to buy something, they should go to the counter and pay the money. The continue_time is 0.5 hours, the result is to tell the charater if they want to buy something, then go to the counter and pay. They will not cost any money here.",
+    "description": "Bookshelves and display racks with study materials. If a character wants to borrow or buy materials, they must go to the nearby counter. The continue_time is 0.5 hours.",
     "functions": [
-      {"earn": 200, "cost": 0, "action": "Carry goods", "onlyOwner": false}
+      {"earn": 200, "cost": 0, "action": "Borrow materials", "onlyOwner": false}
     ],
     "hireCapacity": 0,
     "livingCapacity": 0
   },
   {
     "id": 5,
-    "type": "goods",
+    "type": "study_materials",
     "width": 5,
     "height": 1,
     "assets": "goods-5-1",
-    "description": "There are a variety of goods here. If some game character take operation with this equipment, they cannot just take the goods away. If they want to buy something, they should go to the counter and pay the money. The continue_time is 0.5 hours, the result is to tell the charater if they want to buy something, then go to the counter and pay. They will not cost any money here.",
+    "description": "Bookshelves and display racks with study materials. If a character wants to borrow or buy materials, they must go to the nearby counter. The continue_time is 0.5 hours.",
     "functions": [
-      {"earn": 200, "cost": 0, "action": "Carry goods", "onlyOwner": false}
+      {"earn": 200, "cost": 0, "action": "Borrow materials", "onlyOwner": false}
     ],
     "hireCapacity": 0,
     "livingCapacity": 0
   },
   {
     "id": 6,
-    "type": "goods",
+    "type": "study_materials",
     "width": 3,
     "height": 1,
     "assets": "goods-3-1",
-    "description": "There are a variety of goods here. If some game character take operation with this equipment, they cannot just take the goods away. If they want to buy something, they should go to the counter and pay the money. The continue_time is 0.5 hours, the result is to tell the charater if they want to buy something, then go to the counter and pay. They will not cost any money here.",
+    "description": "Bookshelves and display racks with study materials. If a character wants to borrow or buy materials, they must go to the nearby counter. The continue_time is 0.5 hours.",
     "functions": [
-      {"earn": 200, "cost": 0, "action": "Carry goods", "onlyOwner": false}
+      {"earn": 200, "cost": 0, "action": "Borrow materials", "onlyOwner": false}
     ],
     "hireCapacity": 0,
     "livingCapacity": 0
   },
   {
     "id": 7,
-    "type": "goods",
+    "type": "study_materials",
     "width": 4,
     "height": 1,
     "assets": "goods-4-1",
-    "description": "There are a variety of goods here. If some game character take operation with this equipment, they cannot just take the goods away. If they want to buy something, they should go to the counter and pay the money. The continue_time is 0.5 hours, the result is to tell the charater if they want to buy something, then go to the counter and pay. They will not cost any money here.",
+    "description": "Bookshelves and display racks with study materials. If a character wants to borrow or buy materials, they must go to the nearby counter. The continue_time is 0.5 hours.",
     "functions": [
-      {"earn": 200, "cost": 0, "action": "Carry goods", "onlyOwner": false}
+      {"earn": 200, "cost": 0, "action": "Borrow materials", "onlyOwner": false}
     ],
     "hireCapacity": 0,
     "livingCapacity": 0
@@ -98,7 +98,7 @@
     "width": 3,
     "height": 1,
     "assets": "gate-3-1",
-    "description": "DO NOT BUY ANYTHING HERE. This is just an entrance/exit gate. To buy goods, you MUST enter the building and find the 'counter' or 'goods'.",
+    "description": "Entrance/exit gate connecting different zones in the teaching building. You must enter the zone to interact with the environment.",
     "functions": [
       {"earn": 200, "cost": 0, "action": "Open gate", "onlyOwner": true},
       {"earn": 10, "cost": 200, "action": "Close gate", "onlyOwner": true}
@@ -108,13 +108,13 @@
   },
   {
     "id": 9,
-    "type": "table",
+    "type": "study_table",
     "width": 3,
     "height": 1,
     "assets": "table-3-1",
-    "description": "Any game character can have a meal/have a dessert/have a coffee/take a rest/eat anything that can be eaten/drink here only if what he/she want to eat/have/drink has been bought. If so, the continue_ Time is 1 hours, the result is to tell the character that he/she has finished the meal/drink/eating. If they have not bought/had anything, the continue_ Time is 0.5 hours, the result is to tell the character that he/she doesn't have this and should bought something to drink/eat at the counter. He/she do not spend any money here.",
+    "description": "A collaborative or study table. Characters can read, discuss academic topics, or take a short rest here. The continue_Time is 1 hours.",
     "functions": [
-      {"earn": 200, "cost": 0, "action": "Take a rest", "onlyOwner": false}
+      {"earn": 200, "cost": 0, "action": "Study or discuss", "onlyOwner": false}
     ],
     "hireCapacity": 0,
     "livingCapacity": 0
@@ -125,10 +125,10 @@
     "width": 9,
     "height": 3,
     "assets": "counter-9-3",
-    "description": "This is the counter of a restaurant. The game character can only buy one type of things on the menu at this restaurant. If the customer wants something on the menu, the continue_ Time is 0.5 hours, the bought_thing is the thing he/she bought, the amount is a number of the quantity he/she needs, and the result is tell the character that he bought this kind of food and the amount and say thank you for coming. If the character wants more than one type of things on the menu, the continue_ Time is 0.5 hours, the result is to tell him/her he/she should choose one thing to buy at once. If a game character's action here is not to purchase a specific food, The continue_ Time is 0.5 hours, the result is to tell the character to specify what food he/she needs and tell him the menu, without spending any money. If the customer want something else, the continue_ Time is 0.5 hours, the result is to tell him we don't sell this and say sorry, without spending any money.",
+    "description": "Cafeteria service counter. Characters can buy lunch or meals here. If they need food, they should specify what they need. The continue_Time is 0.5 hours.",
     "functions": [
-      {"earn": 200, "cost": 0, "action": "Sell goods", "onlyOwner": true},
-      {"earn": 10, "cost": 200, "action": "Buy goods", "onlyOwner": false}
+      {"earn": 200, "cost": 0, "action": "Serve meals", "onlyOwner": true},
+      {"earn": 10, "cost": 200, "action": "Buy lunch/meals", "onlyOwner": false}
     ],
     "economic": 10,
     "hireCapacity": 0,
@@ -136,26 +136,26 @@
   },
   {
     "id": 11,
-    "type": "table",
+    "type": "study_table",
     "width": 3,
     "height": 2,
     "assets": "table-3-2",
-    "description": "Any game character can have a meal/have a dessert/have a coffee/take a rest/eat anything that can be eaten/drink here only if what he/she want to eat/have/drink has been bought. If so, the continue_ Time is 1 hours, the result is to tell the character that he/she has finished the meal/drink/eating. If they have not bought/had anything, the continue_ Time is 0.5 hours, the result is to tell the character that he/she doesn't have this and should bought something to drink/eat at the counter. He/she do not spend any money here.",
+    "description": "A collaborative or study table. Characters can read, discuss academic topics, or take a short rest here. The continue_Time is 1 hours.",
     "functions": [
-      {"earn": 200, "cost": 0, "action": "Take a rest", "onlyOwner": false}
+      {"earn": 200, "cost": 0, "action": "Study or discuss", "onlyOwner": false}
     ],
     "hireCapacity": 0,
     "livingCapacity": 0
   },
   {
     "id": 12,
-    "type": "table",
+    "type": "study_table",
     "width": 5,
     "height": 2,
     "assets": "table-5-2",
-    "description": "Any game character can have a meal/have a dessert/have a coffee/take a rest/eat anything that can be eaten/drink here only if what he/she want to eat/have/drink has been bought. If so, the continue_ Time is 1 hours, the result is to tell the character that he/she has finished the meal/drink/eating. If they have not bought/had anything, the continue_ Time is 0.5 hours, the result is to tell the character that he/she doesn't have this and should bought something to drink/eat at the counter. He/she do not spend any money here.",
+    "description": "A large collaborative or study table. Characters can read, discuss academic topics, or take a short rest here. Ideal for group work. The continue_Time is 1 hours.",
     "functions": [
-      {"earn": 200, "cost": 0, "action": "Take a rest", "onlyOwner": false}
+      {"earn": 200, "cost": 0, "action": "Study or discuss", "onlyOwner": false}
     ],
     "hireCapacity": 0,
     "livingCapacity": 0
@@ -166,10 +166,10 @@
     "width": 15,
     "height": 2,
     "assets": "counter-15-2",
-    "description": "This is the counter of a dessert shop. The game character can only buy one type of things on the menu at this dessert shop. If the customer wants something on the menu, the continue_ Time is 0.5 hours, the bought_thing is the thing he/she bought, the amount is a number of the quantity he/she needs, and the result is tell the character that he bought this kind of dessert and the amount and tell him/her that he/she needs to go to a nearby table to enjoy the dessert. If the character wants more than one type of things on the menu, the continue_ Time is 0.5 hours, the result is to tell him/her he/she should choose one thing to buy at once. If a game character's action here is not to purchase a specific dessert, The continue_ Time is 0.5 hours, the result is to tell the character to specify what dessert he/she needs and tell him the menu, without spending any money. If the customer want something else, the continue_ Time is 0.5 hours, the result is to tell him we don't sell this and say sorry, without spending any money.",
+    "description": "Coffee bar counter in the collaboration zone. Characters can buy coffee or refreshments to maintain energy for studying. The continue_Time is 0.5 hours.",
     "functions": [
-      {"earn": 200, "cost": 0, "action": "Sell goods", "onlyOwner": true},
-      {"earn": 10, "cost": 200, "action": "Buy goods", "onlyOwner": false}
+      {"earn": 200, "cost": 0, "action": "Sell coffee", "onlyOwner": true},
+      {"earn": 10, "cost": 200, "action": "Buy coffee", "onlyOwner": false}
     ],
     "economic": 13,
     "hireCapacity": 0,
@@ -177,11 +177,11 @@
   },
   {
     "id": 14,
-    "type": "dessert shop gate",
+    "type": "gate",
     "width": 2,
     "height": 1,
     "assets": "dessert shop gate-2-1",
-    "description": "DO NOT BUY ANYTHING HERE. This is just an entrance/exit gate to the dessert shop. To buy dessert, you MUST enter the shop and find the 'counter'.",
+    "description": "Entrance/exit gate to the collaboration zone (coffee bar). You must enter to buy coffee or use the tables.",
     "functions": [
       {"earn": 200, "cost": 0, "action": "Open gate", "onlyOwner": true},
       {"earn": 10, "cost": 200, "action": "Close gate", "onlyOwner": true}
@@ -191,11 +191,11 @@
   },
   {
     "id": 15,
-    "type": "gym gate",
+    "type": "gate",
     "width": 3,
     "height": 1,
     "assets": "gym gate-3-1",
-    "description": "DO NOT EXERCISE HERE. This is just an entrance/exit gate to the gym. To exercise, you MUST enter the gym and use the 'sports equipments'.",
+    "description": "Entrance/exit gate to the wellness and recovery room. You must enter to use the stretching equipment.",
     "functions": [
       {"earn": 200, "cost": 0, "action": "Open gate", "onlyOwner": true},
       {"earn": 10, "cost": 200, "action": "Close gate", "onlyOwner": true}
@@ -205,78 +205,78 @@
   },
   {
     "id": 16,
-    "type": "sports equipments",
+    "type": "stretching_equipment",
     "width": 9,
     "height": 1,
     "assets": "sports equipments-9-1",
-    "description": "Any game character can do exercise here. If so, the continue_ Time is 1 hours, the result is to tell the character that he/she feels better after exercise. If they take any operations not related to sports, the continue_ Time is 0.5 hours, the result is to tell the character that he/she can only take exercise here. He/she do not spend any money here.",
+    "description": "Equipment designed for students to stretch and relieve physical stress between study sessions. The continue_Time is 1 hours.",
     "functions": [
-      {"earn": 50, "cost": 200, "action": "exerice", "onlyOwner": false}
+      {"earn": 50, "cost": 200, "action": "Stretch and relax", "onlyOwner": false}
     ],
     "hireCapacity": 0,
     "livingCapacity": 0
   },
   {
     "id": 17,
-    "type": "sports equipments",
+    "type": "stretching_equipment",
     "width": 5,
     "height": 1,
     "assets": "sports equipments-5-1",
-    "description": "Any game character can do exercise here. If so, the continue_ Time is 1 hours, the result is to tell the character that he/she feels better after exercise. If they take any operations not related to sports, the continue_ Time is 0.5 hours, the result is to tell the character that he/she can only take exercise here. He/she do not spend any money here.",
+    "description": "Equipment designed for students to stretch and relieve physical stress between study sessions. The continue_Time is 1 hours.",
     "functions": [
-      {"earn": 50, "cost": 200, "action": "exerice", "onlyOwner": false}
+      {"earn": 50, "cost": 200, "action": "Stretch and relax", "onlyOwner": false}
     ],
     "hireCapacity": 0,
     "livingCapacity": 0
   },
   {
     "id": 18,
-    "type": "table",
+    "type": "study_table",
     "width": 4,
     "height": 1,
     "assets": "table-4-1",
-    "description": "Any game character can have a meal/have a dessert/have a coffee/take a rest/eat anything that can be eaten/drink anything that can be eaten/drunk here only if what he/she want to eat/have/drink has been bought. If so, the continue_ Time is 1 hours, the result is to tell the character that he/she has finished the meal/drink/eating. If they have not bought/had anything, the continue_ Time is 0.5 hours, the result is to tell the character that he/she doesn't have this and should bought something to drink/eat at the counter. He/she do not spend any money here.",
+    "description": "A collaborative or study table. Characters can read, discuss academic topics, or take a short rest here. The continue_Time is 1 hours.",
     "functions": [
-      {"earn": 200, "cost": 0, "action": "Take a rest", "onlyOwner": false}
+      {"earn": 200, "cost": 0, "action": "Study or discuss", "onlyOwner": false}
     ],
     "hireCapacity": 0,
     "livingCapacity": 0
   },
   {
     "id": 19,
-    "type": "table",
+    "type": "study_table",
     "width": 2,
     "height": 1,
     "assets": "table-2-1",
-    "description": "Any game character can have a meal/have a dessert/have a coffee/take a rest/eat anything that can be eaten/drink anything that can be eaten/drunk here only if what he/she want to eat/have/drink has been bought. If so, the continue_ Time is 1 hours, the result is to tell the character that he/she has finished the meal/drink/eating. If they have not bought/had anything, the continue_ Time is 0.5 hours, the result is to tell the character that he/she doesn't have this and should bought something to drink/eat at the counter. He/she do not spend any money here.",
+    "description": "A collaborative or study table. Characters can read, discuss academic topics, or take a short rest here. The continue_Time is 1 hours.",
     "functions": [
-      {"earn": 200, "cost": 0, "action": "Take a rest", "onlyOwner": false}
+      {"earn": 200, "cost": 0, "action": "Study or discuss", "onlyOwner": false}
     ],
     "hireCapacity": 0,
     "livingCapacity": 0
   },
   {
     "id": 20,
-    "type": "bed",
+    "type": "nap_pod",
     "width": 2,
     "height": 2,
     "assets": "bed-2-2",
-    "description": "Any game character can only sleep here. If so, the continue_ Time is 7 hours, the result is to tell the character that he/she feels better after sleeping. If they take any operations not related to sleeping, the continue_ Time is 0.5 hours, the result is to tell the character that he/she can only sleep here. He/she do not spend any money here.",
+    "description": "A secluded nap pod or reclining chair for students to take a deep rest and recover from academic fatigue. The continue_Time is 7 hours.",
     "functions": [
-      {"earn": 0, "cost": 200, "action": "Sleep", "onlyOwner": false}
+      {"earn": 0, "cost": 200, "action": "Take a deep rest", "onlyOwner": false}
     ],
     "hireCapacity": 0,
     "livingCapacity": 2
   },
   {
     "id": 21,
-    "type": "hearth",
+    "type": "pantry_station",
     "width": 1,
     "height": 2,
     "assets": "hearth-1-2",
-    "description": "Any game character can cook meals here only if he/she have ingredients. If so, the continue_ Time is 1 hours, the result is to tell the character that he/she have cook a meal and should go to a table nearby to have it. If they have no ingredients, the continue_ Time is 0.5 hours, the result is to tell the character that he/she doesn't have ingredients and should retrieve food from the fridge nearby. If they take any operations not related to cooking meals, the continue_ Time is 0.5 hours, the result is to tell the character that he/she can only cook meals here. He/she do not spend any money here.",
+    "description": "Pantry area with a microwave and water dispenser to prepare quick meals or hot drinks. The continue_Time is 1 hours.",
     "functions": [
-      {"earn": 0, "cost": 50, "action": "Take a rest", "onlyOwner": false}
+      {"earn": 0, "cost": 50, "action": "Prepare food/drink", "onlyOwner": false}
     ],
     "hireCapacity": 0,
     "livingCapacity": 0
@@ -287,7 +287,7 @@
     "width": 1,
     "height": 2,
     "assets": "toilet-1-2",
-    "description": "Any game character can use toilet here. If so, the continue_ Time is 1 hours, the result is to tell the character that he/she have used toilet and feel better. If they take any operations not related to using toilet, the continue_ Time is 0.5 hours, the result is to tell the character that he/she can only use toilet here. He/she do not spend any money here.",
+    "description": "Restroom facilities in the building. The continue_Time is 1 hours.",
     "functions": [
       {"earn": 0, "cost": 20, "action": "Use toilet", "onlyOwner": false}
     ],
@@ -296,13 +296,13 @@
   },
   {
     "id": 23,
-    "type": "fridge",
+    "type": "vending_machine",
     "width": 1,
     "height": 2,
     "assets": " fridge-1-2",
-    "description": "Any game character can store/retrieve foods here. If so, the continue_ Time is 0.5 hours, the result is to tell the character that he/she have store/retrieve foods. If they take any operations not related to store/retrieve foods, the continue_ Time is 0.5 hours, the result is to tell the character that he/she can only store/retrieve foods here. He/she do not spend any money here.",
+    "description": "Vending machine or smart fridge for quick snacks and cold drinks. The continue_Time is 0.5 hours.",
     "functions": [
-      {"earn": 0, "cost": 20, "action": "Save foods", "onlyOwner": false}
+      {"earn": 0, "cost": 20, "action": "Get cold drinks/snacks", "onlyOwner": false}
     ],
     "hireCapacity": 0,
     "livingCapacity": 0
@@ -313,100 +313,100 @@
     "width": 2,
     "height": 2,
     "assets": "sink-2-2",
-    "description": "Any game character can wash one's face and rinse one's mouth here. If so, the continue_ Time is 1 hours, the result is to tell the character that he/she have wash one's face and rinse one's mouth and feel better. If they take any operations not related to wash one's face and rinse one's mouth, the continue_ Time is 0.5 hours, the result is to tell the character that he/she can only wash one's face and rinse one's mouth here. He/she do not spend any money here.",
+    "description": "Washbasin area. Characters can wash their face to refresh themselves. The continue_Time is 1 hours.",
     "functions": [
-      {"earn": 0, "cost": 20, "action": "Wash hands", "onlyOwner": false}
+      {"earn": 0, "cost": 20, "action": "Refresh face/hands", "onlyOwner": false}
     ],
     "hireCapacity": 0,
     "livingCapacity": 0
   },
   {
     "id": 25,
-    "type": "worktop",
+    "type": "standing_desk",
     "width": 3,
     "height": 2,
     "assets": "worktop-3-2",
-    "description": "Any game character can cook meals here only if he/she have ingredients. If so, the continue_ Time is 1 hours, the result is to tell the character that he/she have cook a meal and should go to a table nearby to have it. If they have no ingredients, the continue_ Time is 0.5 hours, the result is to tell the character that he/she doesn't have ingredients and should retrieve food from the fridge nearby. If they take any operations not related to cooking meals, the continue_ Time is 0.5 hours, the result is to tell the character that he/she can only cook meals here. He/she do not spend any money here.",
+    "description": "Standing desk or high table for quick tasks, reading, or brief chats. The continue_Time is 1 hours.",
     "functions": [
-      {"earn": 0, "cost": 20, "action": "Prepare foods", "onlyOwner": false}
+      {"earn": 0, "cost": 20, "action": "Work at standing desk", "onlyOwner": false}
     ],
     "hireCapacity": 0,
     "livingCapacity": 0
   },
   {
     "id": 26,
-    "type": "shower",
+    "type": "refreshment_booth",
     "width": 1,
     "height": 1,
     "assets": "shower-1-1",
-    "description": "Any game character can take a shower here. If so, the continue_ Time is 1 hours, the result is to tell the character that he/she have taken a shower. If they take any operations not related to taking a shower, the continue_ Time is 0.5 hours, the result is to tell the character that he/she can only take a shower here. He/she do not spend any money here.",
+    "description": "Soundproof booth or refreshment stall. The continue_Time is 1 hours.",
     "functions": [
-      {"earn": 0, "cost": 20, "action": "Take a shower", "onlyOwner": false}
+      {"earn": 0, "cost": 20, "action": "Use refreshment booth", "onlyOwner": false}
     ],
     "hireCapacity": 0,
     "livingCapacity": 0
   },
   {
     "id": 27,
-    "type": "swing",
+    "type": "interactive_installation",
     "width": 2,
     "height": 1,
     "assets": "swing-2-1",
-    "description": "Any game character can play swing here. If so, the continue_ Time is 0.5 hours, the result is to tell the character that he/she have played on a swing and be more happier. If they take any operations not related to swinging, the continue_ Time is 0.5 hours, the result is to tell the character that he/she can only play swing here. He/she do not spend any money here.",
+    "description": "Interactive art or relaxation installation in the atrium. Characters can relax and interact with it to boost mood. The continue_Time is 0.5 hours.",
     "functions": [
-      {"earn": 10, "cost": 0, "action": "Play swing", "onlyOwner": false}
+      {"earn": 10, "cost": 0, "action": "Interact with installation", "onlyOwner": false}
     ],
     "hireCapacity": 0,
     "livingCapacity": 0
   },
   {
     "id": 28,
-    "type": "slide",
+    "type": "interactive_installation",
     "width": 3,
     "height": 3,
     "assets": "slide-3-3.0",
-    "description": "Any game character can play slide here. If so, the continue_ Time is 0.5 hours, the result is to tell the character that he/she have played slide and be more happier. If they take any operations not related to playing slide, the continue_ Time is 0.5 hours, the result is to tell the character that he/she can only play slide here. He/she do not spend any money here.",
+    "description": "Interactive art or relaxation installation in the atrium. Characters can relax and interact with it to boost mood. The continue_Time is 0.5 hours.",
     "functions": [
-      {"earn": 10, "cost": 0, "action": "Play slide", "onlyOwner": false}
+      {"earn": 10, "cost": 0, "action": "Interact with installation", "onlyOwner": false}
     ],
     "hireCapacity": 0,
     "livingCapacity": 0
   },
   {
     "id": 29,
-    "type": "bench",
+    "type": "corridor_bench",
     "width": 2,
     "height": 2,
     "assets": "bench-2-2.0",
-    "description": "Any game character can sit/have a rest here. If so, the continue_ Time is 0.5 hours, the result is to tell the character that he/she have sat/had a rest and feel better. If they take any operations not related to sitting/having a rest, the continue_ Time is 0.5 hours, the result is to tell the character that he/she can only sit/have a rest here. He/she do not spend any money here.",
+    "description": "Bench in the corridor or atrium. Good for brief rests, observing crowds, or casual chats. The continue_Time is 0.5 hours.",
     "functions": [
-      {"earn": 10, "cost": 0, "action": "Have a rest", "onlyOwner": false}
+      {"earn": 10, "cost": 0, "action": "Sit and rest", "onlyOwner": false}
     ],
     "hireCapacity": 0,
     "livingCapacity": 0
   },
   {
     "id": 30,
-    "type": "bench",
+    "type": "corridor_bench",
     "width": 1,
     "height": 2,
     "assets": "bench-1-2",
-    "description": "Any game character can sit/have a rest here. If so, the continue_ Time is 0.5 hours, the result is to tell the character that he/she have sat/had a rest and feel better. If they take any operations not related to sitting/having a rest, the continue_ Time is 0.5 hours, the result is to tell the character that he/she can only sit/have a rest here. He/she do not spend any money here.",
+    "description": "Bench in the corridor or atrium. Good for brief rests, observing crowds, or casual chats. The continue_Time is 0.5 hours.",
     "functions": [
-      {"earn": 10, "cost": 0, "action": "Have a rest", "onlyOwner": false}
+      {"earn": 10, "cost": 0, "action": "Sit and rest", "onlyOwner": false}
     ],
     "hireCapacity": 0,
     "livingCapacity": 0
   },
   {
     "id": 31,
-    "type": "bench",
+    "type": "corridor_bench",
     "width": 2,
     "height": 3,
     "assets": "bench-2-3",
-    "description": "Any game character can sit/have a rest here. If so, the continue_ Time is 0.5 hours, the result is to tell the character that he/she have sat/had a rest and feel better. If they take any operations not related to sitting/having a rest, the continue_ Time is 0.5 hours, the result is to tell the character that he/she can only sit/have a rest here. He/she do not spend any money here.",
+    "description": "Bench in the corridor or atrium. Good for brief rests, observing crowds, or casual chats. The continue_Time is 0.5 hours.",
     "functions": [
-      {"earn": 10, "cost": 0, "action": "Have a rest", "onlyOwner": false}
+      {"earn": 10, "cost": 0, "action": "Sit and rest", "onlyOwner": false}
     ],
     "hireCapacity": 0,
     "livingCapacity": 0
@@ -417,7 +417,7 @@
     "width": 2,
     "height": 1,
     "assets": "bin-2-1",
-    "description": "Any game character can throw away rubbish here. If so, the continue_ Time is 0.5 hours, the result is to tell the character that he/she have thrown away rubbish. If they take any operations not related to throw away rubbish, the continue_ Time is 0.5 hours, the result is to tell the character that he/she can only throw away rubbish here. He/she do not spend any money here.",
+    "description": "Recycling and waste bin. The continue_Time is 0.5 hours.",
     "functions": [
       {"earn": 200, "cost": 0, "action": "Clean around", "onlyOwner": false}
     ],
@@ -426,13 +426,13 @@
   },
   {
     "id": 33,
-    "type": "bench",
+    "type": "corridor_bench",
     "width": 2,
     "height": 1,
     "assets": "bench-2-1",
-    "description": "Any game character can sit/have a rest here. If so, the continue_ Time is 0.5 hours, the result is to tell the character that he/she have sat/had a rest and feel better. If they take any operations not related to sitting/having a rest, the continue_ Time is 0.5 hours, the result is to tell the character that he/she can only sit/have a rest here. He/she do not spend any money here.",
+    "description": "Bench in the corridor or atrium. Good for brief rests, observing crowds, or casual chats. The continue_Time is 0.5 hours.",
     "functions": [
-      {"earn": 10, "cost": 0, "action": "Have a rest", "onlyOwner": false}
+      {"earn": 10, "cost": 0, "action": "Sit and rest", "onlyOwner": false}
     ],
     "hireCapacity": 0,
     "livingCapacity": 0
@@ -443,7 +443,7 @@
     "width": 2,
     "height": 2,
     "assets": "bin-2-2",
-    "description": "Any game character can throw away rubbish here. If so, the continue_ Time is 0.5 hours, the result is to tell the character that he/she have thrown away rubbish. If they take any operations not related to throw away rubbish, the continue_ Time is 0.5 hours, the result is to tell the character that he/she can only throw away rubbish here. He/she do not spend any money here.",
+    "description": "Recycling and waste bin. The continue_Time is 0.5 hours.",
     "functions": [
       {"earn": 200, "cost": 0, "action": "Clean around", "onlyOwner": false}
     ],
@@ -452,130 +452,130 @@
   },
   {
     "id": 35,
-    "type": "bench",
+    "type": "corridor_bench",
     "width": 3,
     "height": 1,
     "assets": "bench-3-1",
-    "description": "Any game character can sit/have a rest here. If so, the continue_ Time is 0.5 hours, the result is to tell the character that he/she have sat/had a rest and feel better. If they take any operations not related to sitting/having a rest, the continue_ Time is 0.5 hours, the result is to tell the character that he/she can only sit/have a rest here. He/she do not spend any money here.",
+    "description": "Bench in the corridor or atrium. Good for brief rests, observing crowds, or casual chats. The continue_Time is 0.5 hours.",
     "functions": [
-      {"earn": 10, "cost": 0, "action": "Have a rest", "onlyOwner": false}
+      {"earn": 10, "cost": 0, "action": "Sit and rest", "onlyOwner": false}
     ],
     "hireCapacity": 0,
     "livingCapacity": 0
   },
   {
     "id": 36,
-    "type": "sports equipments",
+    "type": "stretching_equipment",
     "width": 1,
     "height": 1,
     "assets": "sports equipments-1-1",
-    "description": "Any game character can do exercise here. If so, the continue_ Time is 1 hours, the result is to tell the character that he/she feels better after exercise. If they take any operations not related to sports, the continue_ Time is 0.5 hours, the result is to tell the character that he/she can only take exercise here. He/she do not spend any money here.",
+    "description": "Equipment designed for students to stretch and relieve physical stress between study sessions. The continue_Time is 1 hours.",
     "functions": [
-      {"earn": 50, "cost": 200, "action": "exerice", "onlyOwner": false}
+      {"earn": 50, "cost": 200, "action": "Stretch and relax", "onlyOwner": false}
     ],
     "hireCapacity": 0,
     "livingCapacity": 0
   },
   {
     "id": 37,
-    "type": "sports equipments",
+    "type": "stretching_equipment",
     "width": 1,
     "height": 3,
     "assets": "sports equipments-1-3",
-    "description": "Any game character can do exercise here. If so, the continue_ Time is 1 hours, the result is to tell the character that he/she feels better after exercise. If they take any operations not related to sports, the continue_ Time is 0.5 hours, the result is to tell the character that he/she can only take exercise here. He/she do not spend any money here.",
+    "description": "Equipment designed for students to stretch and relieve physical stress between study sessions. The continue_Time is 1 hours.",
     "functions": [
-      {"earn": 50, "cost": 200, "action": "exerice", "onlyOwner": false}
+      {"earn": 50, "cost": 200, "action": "Stretch and relax", "onlyOwner": false}
     ],
     "hireCapacity": 0,
     "livingCapacity": 0
   },
   {
     "id": 38,
-    "type": "sports equipments",
+    "type": "stretching_equipment",
     "width": 3,
     "height": 1,
     "assets": "sports equipments-3-1",
-    "description": "Any game character can do exercise here. If so, the continue_ Time is 1 hours, the result is to tell the character that he/she feels better after exercise. If they take any operations not related to sports, the continue_ Time is 0.5 hours, the result is to tell the character that he/she can only take exercise here. He/she do not spend any money here.",
+    "description": "Equipment designed for students to stretch and relieve physical stress between study sessions. The continue_Time is 1 hours.",
     "functions": [
-      {"earn": 50, "cost": 200, "action": "exerice", "onlyOwner": false}
+      {"earn": 50, "cost": 200, "action": "Stretch and relax", "onlyOwner": false}
     ],
     "hireCapacity": 0,
     "livingCapacity": 0
   },
   {
     "id": 39,
-    "type": "sports equipments",
+    "type": "stretching_equipment",
     "width": 2,
     "height": 1,
     "assets": "sports equipments-2-1",
-    "description": "Any game character can do exercise here. If so, the continue_ Time is 1 hours, the result is to tell the character that he/she feels better after exercise. If they take any operations not related to sports, the continue_ Time is 0.5 hours, the result is to tell the character that he/she can only take exercise here. He/she do not spend any money here.",
+    "description": "Equipment designed for students to stretch and relieve physical stress between study sessions. The continue_Time is 1 hours.",
     "functions": [
-      {"earn": 50, "cost": 200, "action": "exerice", "onlyOwner": false}
+      {"earn": 50, "cost": 200, "action": "Stretch and relax", "onlyOwner": false}
     ],
     "hireCapacity": 0,
     "livingCapacity": 0
   },
   {
     "id": 40,
-    "type": "sports equipments",
+    "type": "stretching_equipment",
     "width": 2,
     "height": 2,
     "assets": "sports equipments-2-2",
-    "description": "Any game character can do exercise here. If so, the continue_ Time is 1 hours, the result is to tell the character that he/she feels better after exercise. If they take any operations not related to sports, the continue_ Time is 0.5 hours, the result is to tell the character that he/she can only take exercise here. He/she do not spend any money here.",
+    "description": "Equipment designed for students to stretch and relieve physical stress between study sessions. The continue_Time is 1 hours.",
     "functions": [
-      {"earn": 50, "cost": 200, "action": "exerice", "onlyOwner": false}
+      {"earn": 50, "cost": 200, "action": "Stretch and relax", "onlyOwner": false}
     ],
     "hireCapacity": 0,
     "livingCapacity": 0
   },
   {
     "id": 41,
-    "type": "sports equipments",
+    "type": "stretching_equipment",
     "width": 2,
     "height": 3,
     "assets": "sports equipments-2-3",
-    "description": "Any game character can do exercise here. If so, the continue_ Time is 1 hours, the result is to tell the character that he/she feels better after exercise. If they take any operations not related to sports, the continue_ Time is 0.5 hours, the result is to tell the character that he/she can only take exercise here. He/she do not spend any money here.",
+    "description": "Equipment designed for students to stretch and relieve physical stress between study sessions. The continue_Time is 1 hours.",
     "functions": [
-      {"earn": 50, "cost": 200, "action": "exerice", "onlyOwner": false}
+      {"earn": 50, "cost": 200, "action": "Stretch and relax", "onlyOwner": false}
     ],
     "hireCapacity": 0,
     "livingCapacity": 0
   },
   {
     "id": 42,
-    "type": "sports equipments",
+    "type": "stretching_equipment",
     "width": 7,
     "height": 1,
     "assets": "sports equipments-7-1",
-    "description": "Any game character can do exercise here. If so, the continue_ Time is 1 hours, the result is to tell the character that he/she feels better after exercise. If they take any operations not related to sports, the continue_ Time is 0.5 hours, the result is to tell the character that he/she can only take exercise here. He/she do not spend any money here.",
+    "description": "Equipment designed for students to stretch and relieve physical stress between study sessions. The continue_Time is 1 hours.",
     "functions": [
-      {"earn": 50, "cost": 200, "action": "exerice", "onlyOwner": false}
+      {"earn": 50, "cost": 200, "action": "Stretch and relax", "onlyOwner": false}
     ],
     "hireCapacity": 0,
     "livingCapacity": 0
   },
   {
     "id": 43,
-    "type": "sports equipments",
+    "type": "stretching_equipment",
     "width": 1,
     "height": 2,
     "assets": "sports equipments-1-2",
-    "description": "Any game character can do exercise here. If so, the continue_ Time is 1 hours, the result is to tell the character that he/she feels better after exercise. If they take any operations not related to sports, the continue_ Time is 0.5 hours, the result is to tell the character that he/she can only take exercise here. He/she do not spend any money here.",
+    "description": "Equipment designed for students to stretch and relieve physical stress between study sessions. The continue_Time is 1 hours.",
     "functions": [
-      {"earn": 50, "cost": 200, "action": "exerice", "onlyOwner": false}
+      {"earn": 50, "cost": 200, "action": "Stretch and relax", "onlyOwner": false}
     ],
     "hireCapacity": 0,
     "livingCapacity": 0
   },
   {
     "id": 44,
-    "type": "sports equipments",
+    "type": "stretching_equipment",
     "width": 1,
     "height": 1,
     "assets": "sports equipments-1-1.0",
-    "description": "Any game character can do exercise here. If so, the continue_ Time is 1 hours, the result is to tell the character that he/she feels better after exercise. If they take any operations not related to sports, the continue_ Time is 0.5 hours, the result is to tell the character that he/she can only take exercise here. He/she do not spend any money here.",
+    "description": "Equipment designed for students to stretch and relieve physical stress between study sessions. The continue_Time is 1 hours.",
     "functions": [
-      {"earn": 50, "cost": 200, "action": "exerice", "onlyOwner": false}
+      {"earn": 50, "cost": 200, "action": "Stretch and relax", "onlyOwner": false}
     ],
     "hireCapacity": 0,
     "livingCapacity": 0
@@ -586,59 +586,59 @@
     "width": 2,
     "height": 1,
     "assets": "sofa-2-1",
-    "description": "Any game character can sit/have a rest here. If so, the continue_ Time is 0.5 hours, the result is to tell the character that he/she have sat/had a rest and feel better. If they take any operations not related to sitting/having a rest, the continue_ Time is 0.5 hours, the result is to tell the character that he/she can only sit/have a rest here. He/she do not spend any money here.",
+    "description": "Comfortable lounge sofa. Characters can sit and have a rest here to relieve fatigue. The continue_Time is 0.5 hours.",
     "functions": [
-      {"earn": 10, "cost": 0, "action": "Have a rest", "onlyOwner": false}
+      {"earn": 10, "cost": 0, "action": "Sit and rest", "onlyOwner": false}
     ],
     "hireCapacity": 0,
     "livingCapacity": 0
   },
   {
     "id": 46,
-    "type": "hearth",
+    "type": "pantry_station",
     "width": 4,
     "height": 2,
     "assets": "hearth-4-2",
-    "description": "Any game character can cook meals here only if he/she have ingredients. If so, the continue_ Time is 1 hours, the result is to tell the character that he/she have cook a meal and should go to a table nearby to have it. If they have no ingredients, the continue_ Time is 0.5 hours, the result is to tell the character that he/she doesn't have ingredients and should retrieve food from the fridge nearby. If they take any operations not related to cooking meals, the continue_ Time is 0.5 hours, the result is to tell the character that he/she can only cook meals here. He/she do not spend any money here.",
+    "description": "Pantry area with a microwave and water dispenser to prepare quick meals or hot drinks. The continue_Time is 1 hours.",
     "functions": [
-      {"earn": 0, "cost": 50, "action": "Take a rest", "onlyOwner": false}
+      {"earn": 0, "cost": 50, "action": "Prepare food/drink", "onlyOwner": false}
     ],
     "hireCapacity": 0,
     "livingCapacity": 0
   },
   {
     "id": 47,
-    "type": "fridge",
+    "type": "vending_machine",
     "width": 1,
     "height": 2,
     "assets": "fridge-1-2",
-    "description": "Any game character can store/retrieve foods here. If so, the continue_ Time is 0.5 hours, the result is to tell the character that he/she have store/retrieve foods. If they take any operations not related to store/retrieve foods, the continue_ Time is 0.5 hours, the result is to tell the character that he/she can only store/retrieve foods here. He/she do not spend any money here.",
+    "description": "Vending machine or smart fridge for quick snacks and cold drinks. The continue_Time is 0.5 hours.",
     "functions": [
-      {"earn": 0, "cost": 20, "action": "Save foods", "onlyOwner": false}
+      {"earn": 0, "cost": 20, "action": "Get cold drinks/snacks", "onlyOwner": false}
     ],
     "hireCapacity": 0,
     "livingCapacity": 0
   },
   {
     "id": 48,
-    "type": "television",
+    "type": "digital_screen",
     "width": 2,
     "height": 1,
     "assets": "television-2-1",
-    "description": "Any game character can watch TV here. If so, the continue_ Time is 1 hours, the result is to tell the character that he/she have watched TV and had a good time. If they take any operations not related to watching TV, the continue_ Time is 0.5 hours, the result is to tell the character that he/she can only watch TV here. He/she do not spend any money here.",
+    "description": "Interactive digital screen for campus news or academic presentations. The continue_Time is 1 hours.",
     "functions": [
-      {"earn": 0, "cost": 20, "action": "Watch TV", "onlyOwner": false}
+      {"earn": 0, "cost": 20, "action": "Watch presentations", "onlyOwner": false}
     ],
     "hireCapacity": 0,
     "livingCapacity": 0
   },
   {
     "id": 49,
-    "type": "phone",
+    "type": "public_phone",
     "width": 1,
     "height": 1,
     "assets": "phone-1-1",
-    "description": "Any game character can make a phone call here. If so, the continue_ Time is 1 hours, the result is to tell the character that he/she have made a phone call. If they take any operations not related to making a phone call, the continue_ Time is 0.5 hours, the result is to tell the character that he/she can only make a phone call here. He/she do not spend any money here.",
+    "description": "Public phone station or private phone booth. The continue_Time is 1 hours.",
     "functions": [
       {"earn": 0, "cost": 10, "action": "Make a Phone Call", "onlyOwner": false}
     ],
@@ -647,39 +647,39 @@
   },
   {
     "id": 50,
-    "type": "shower",
+    "type": "refreshment_booth",
     "width": 2,
     "height": 2,
     "assets": "shower-2-2",
-    "description": "Any game character can take a shower here. If so, the continue_ Time is 1 hours, the result is to tell the character that he/she have taken a shower. If they take any operations not related to taking a shower, the continue_ Time is 0.5 hours, the result is to tell the character that he/she can only take a shower here. He/she do not spend any money here.",
+    "description": "Soundproof booth or refreshment stall. The continue_Time is 1 hours.",
     "functions": [
-      {"earn": 0, "cost": 20, "action": "Take a shower", "onlyOwner": false}
+      {"earn": 0, "cost": 20, "action": "Use refreshment booth", "onlyOwner": false}
     ],
     "hireCapacity": 0,
     "livingCapacity": 0
   },
   {
     "id": 51,
-    "type": "wardrobe",
+    "type": "storage_locker",
     "width": 3,
     "height": 2,
     "assets": "wardrobe-3-2",
-    "description": "Any game character can check clothes here. If so, the continue_ Time is 0.5 hours, the result is to tell the character that he/she has checked the wardrobe.",
+    "description": "Lockers for students to store heavy books and personal items. The continue_Time is 0.5 hours.",
     "functions": [
-      {"earn": 0, "cost": 20, "action": "Check clothes", "onlyOwner": false}
+      {"earn": 0, "cost": 20, "action": "Store items", "onlyOwner": false}
     ],
     "hireCapacity": 0,
     "livingCapacity": 0
   },
   {
     "id": 52,
-    "type": "cupboard",
+    "type": "water_dispenser",
     "width": 1,
     "height": 1,
     "assets": "cupboard-1-1",
-    "description": "Any game character can get a drink here. If so, the continue_ Time is 0.5 hours.",
+    "description": "Water dispenser station. Characters can get a quick drink here. The continue_Time is 0.5 hours.",
     "functions": [
-      {"earn": 0, "cost": 20, "action": "Drink", "onlyOwner": false}
+      {"earn": 0, "cost": 20, "action": "Drink water", "onlyOwner": false}
     ],
     "hireCapacity": 0,
     "livingCapacity": 0
@@ -690,7 +690,7 @@
     "width": 2,
     "height": 1,
     "assets": "gate-2-1",
-    "description": "DO NOT BUY ANYTHING HERE. This is just an entrance/exit gate. To interact with items or people, you MUST enter the building.",
+    "description": "Entrance/exit gate connecting different zones in the teaching building. You must enter the zone to interact with the environment.",
     "functions": [
       {"earn": 200, "cost": 0, "action": "Open gate", "onlyOwner": true},
       {"earn": 10, "cost": 200, "action": "Close gate", "onlyOwner": true}
@@ -700,13 +700,13 @@
   },
   {
     "id": 54,
-    "type": "desk",
+    "type": "focus_desk",
     "width": 5,
     "height": 1,
     "assets": "desk-5-1",
-    "description": "Any game character can work here. If some one take operation which is not related to working, he/she needs to be reminded that he/she can only work here to make money. If some one work here, the continue_ Time is 2 hours, the result is that he/she is tired after work and need to relax, the earn is 200.",
+    "description": "A quiet, partitioned desk for focused academic work or writing dissertations. The continue_Time is 2 hours.",
     "functions": [
-      {"earn": 500, "cost": 0, "action": "Earn money", "onlyOwner": false}
+      {"earn": 500, "cost": 0, "action": "Do deep work", "onlyOwner": false}
     ],
     "economic": 54,
     "hireCapacity": 1,
@@ -714,13 +714,13 @@
   },
   {
     "id": 55,
-    "type": "desk",
+    "type": "focus_desk",
     "width": 4,
     "height": 1,
     "assets": "desk-4-1",
-    "description": "Any game character can work here. If some one take operation which is not related to working, he/she needs to be reminded that he/she can only work here to make money. If some one work here, the continue_ Time is 2 hours, the result is that he/she is tired after work and need to relax, the earn is 200.",
+    "description": "A quiet, partitioned desk for focused academic work or writing dissertations. The continue_Time is 2 hours.",
     "functions": [
-      {"earn": 500, "cost": 0, "action": "Earn money", "onlyOwner": false}
+      {"earn": 500, "cost": 0, "action": "Do deep work", "onlyOwner": false}
     ],
     "economic": 55,
     "hireCapacity": 1,
@@ -732,7 +732,7 @@
     "width": 2,
     "height": 2,
     "assets": "gate-2-2",
-    "description": "DO NOT BUY ANYTHING HERE. This is just an entrance/exit gate. Please enter the building for activities.",
+    "description": "Entrance/exit gate connecting different zones in the teaching building. You must enter the zone to interact with the environment.",
     "functions": [
       {"earn": 200, "cost": 0, "action": "Open gate", "onlyOwner": true},
       {"earn": 10, "cost": 200, "action": "Close gate", "onlyOwner": true}
@@ -746,10 +746,10 @@
     "width": 3,
     "height": 3,
     "assets": "counter-3-3",
-    "description": "This is the counter of a museum. Any game character can buy a ticket to enjoy some exhibits here. If a game character takes the action of purchasing a ticket, the continue_ Time is 0.5 hours, the result is to tell the character that he bought a ticket, but he needs to go to a nearby exhibit to enjoy the exhibit. If the game character has a ticket of this exhibit, The continue_ Time is 0.5 hours, it cost no money, the result is to tell the character that he/she has a ticket and can go straight to the nearby exhibit to enjoy the exhibit. If a game character's action here is not to purchase a ticket, The continue_ Time is 0.5 hours, the result is to tell the character to buy a ticket, without spending any money.",
+    "description": "Exhibition hall reception counter. Characters can check in or get information about academic posters. The continue_Time is 0.5 hours.",
     "functions": [
-      {"earn": 200, "cost": 0, "action": "Sell goods", "onlyOwner": true},
-      {"earn": 10, "cost": 200, "action": "Buy goods", "onlyOwner": false}
+      {"earn": 200, "cost": 0, "action": "Provide info", "onlyOwner": true},
+      {"earn": 10, "cost": 200, "action": "Check in", "onlyOwner": false}
     ],
     "economic": 57,
     "hireCapacity": 0,
@@ -757,78 +757,78 @@
   },
   {
     "id": 58,
-    "type": "exhibits",
+    "type": "academic_posters",
     "width": 9,
     "height": 11,
     "assets": "exhibits-9-11",
-    "description": "There are a variety of exhibits here. If some game character take operation with this equipment, they cannot just take the exhibits away. If they want to enjoy/watch the exhibits and have not bought any ticket, they should go to the counter and buy a ticket. If so, the continue_time is 0.5 hours, the result is to tell the charater if they want to enjoy the exhibits, then go to the counter and buy a ticket. If they want to enjoy/watch the exhibits and have bought any ticket, they can enjoy/watch the exhibits here. If so, the continue_time is 2 hours, the result is to tell the charater that the have enjoyed/watched the exhibits well. If they want to take other operations,  the continue_time is 0.5 hours, the result is to tell the charater that if they want to enjoy exhibits here, please go to the counter and buy a ticket. They will not cost any money here.",
+    "description": "Display boards showcasing recent research posters and student architectural models. Characters can view and gain knowledge here. The continue_time is 2 hours.",
     "functions": [
-      {"earn": 100, "cost": 50, "action": "Gain knowledge", "onlyOwner": false}
+      {"earn": 100, "cost": 50, "action": "Read academic posters", "onlyOwner": false}
     ],
     "hireCapacity": 0,
     "livingCapacity": 0
   },
   {
     "id": 59,
-    "type": "exhibits",
+    "type": "academic_posters",
     "width": 9,
     "height": 3,
     "assets": "exhibits-9-3",
-    "description": "There are a variety of exhibits here. If some game character take operation with this equipment, they cannot just take the exhibits away.  If they want to enjoy/watch the exhibits and have not bought any ticket, they should go to the counter and buy a ticket. If so, the continue_time is 0.5 hours, the result is to tell the charater if they want to enjoy the exhibits, then go to the counter and buy a ticket. If they want to enjoy/watch the exhibits and have bought any ticket, they can enjoy/watch the exhibits here. If so, the continue_time is 2 hours, the result is to tell the charater that the have enjoyed/watched the exhibits well. If they want to take other operations,  the continue_time is 0.5 hours, the result is to tell the charater that if they want to enjoy exhibits here, please go to the counter and buy a ticket. They will not cost any money here.",
+    "description": "Display boards showcasing recent research posters and student architectural models. Characters can view and gain knowledge here. The continue_time is 2 hours.",
     "functions": [
-      {"earn": 100, "cost": 50, "action": "Gain knowledge", "onlyOwner": false}
+      {"earn": 100, "cost": 50, "action": "Read academic posters", "onlyOwner": false}
     ],
     "hireCapacity": 0,
     "livingCapacity": 0
   },
   {
     "id": 60,
-    "type": "hearth",
+    "type": "pantry_station",
     "width": 3,
     "height": 2,
     "assets": "hearth-3-2",
-    "description": "Any game character can cook meals here only if he/she have ingredients. If so, the continue_ Time is 1 hours, the result is to tell the character that he/she have cook a meal and should go to a table nearby to have it. If they have no ingredients, the continue_ Time is 0.5 hours, the result is to tell the character that he/she doesn't have ingredients and should retrieve food from the fridge nearby. If they take any operations not related to cooking meals, the continue_ Time is 0.5 hours, the result is to tell the character that he/she can only cook meals here. He/she do not spend any money here.",
+    "description": "Pantry area with a microwave and water dispenser to prepare quick meals or hot drinks. The continue_Time is 1 hours.",
     "functions": [
-      {"earn": 0, "cost": 50, "action": "Take a rest", "onlyOwner": false}
+      {"earn": 0, "cost": 50, "action": "Prepare food/drink", "onlyOwner": false}
     ],
     "hireCapacity": 0,
     "livingCapacity": 0
   },
   {
     "id": 61,
-    "type": "bed",
+    "type": "nap_pod",
     "width": 6,
     "height": 2,
     "assets": "bed-6-2",
-    "description": "Any game character can only sleep here. If so, the continue_ Time is 7 hours, the result is to tell the character that he/she feels better after sleeping. If they take any operations not related to sleeping, the continue_ Time is 0.5 hours, the result is to tell the character that he/she can only sleep here. He/she do not spend any money here.",
+    "description": "A secluded nap pod or reclining chair for students to take a deep rest and recover from academic fatigue. The continue_Time is 7 hours.",
     "functions": [
-      {"earn": 0, "cost": 200, "action": "Sleep", "onlyOwner": false}
+      {"earn": 0, "cost": 200, "action": "Take a deep rest", "onlyOwner": false}
     ],
     "hireCapacity": 0,
     "livingCapacity": 4
   },
   {
     "id": 62,
-    "type": "table",
+    "type": "study_table",
     "width": 2,
     "height": 2,
     "assets": "table-2-2",
-    "description": "Any game character can have a meal/have a dessert/have a coffee/take a rest/eat anything that can be eaten/drunk here only if what he/she want to eat/have/drink has been bought. If so, the continue_ Time is 1 hours, the result is to tell the character that he/she has finished the meal/drink/eating. If they have not bought/had anything, the continue_ Time is 0.5 hours, the result is to tell the character that he/she doesn't have this and should bought something to drink/eat at the counter. He/she do not spend any money here.",
+    "description": "A collaborative or study table. Characters can read, discuss academic topics, or take a short rest here. The continue_Time is 1 hours.",
     "functions": [
-      {"earn": 200, "cost": 0, "action": "Take a rest", "onlyOwner": false}
+      {"earn": 200, "cost": 0, "action": "Study or discuss", "onlyOwner": false}
     ],
     "hireCapacity": 0,
     "livingCapacity": 0
   },
   {
     "id": 63,
-    "type": "fridge",
+    "type": "vending_machine",
     "width": 3,
     "height": 2,
     "assets": "fridge-3-2",
-    "description": "Any game character can store/retrieve foods here. If so, the continue_ Time is 0.5 hours, the result is to tell the character that he/she have store/retrieve foods. If they take any operations not related to store/retrieve foods, the continue_ Time is 0.5 hours, the result is to tell the character that he/she can only store/retrieve foods here. He/she do not spend any money here.",
+    "description": "Vending machine or smart fridge for quick snacks and cold drinks. The continue_Time is 0.5 hours.",
     "functions": [
-      {"earn": 0, "cost": 20, "action": "Save foods", "onlyOwner": false}
+      {"earn": 0, "cost": 20, "action": "Get cold drinks/snacks", "onlyOwner": false}
     ],
     "hireCapacity": 0,
     "livingCapacity": 0
@@ -839,10 +839,10 @@
     "width": 3,
     "height": 6,
     "assets": "counter-3-6",
-    "description": "This is the counter of a cafe. The game character can only buy one type of things on the menu at this coffee shop. If the customer wants something on the menu, the continue_ Time is 0.5 hours, the bought_thing is the thing he/she bought, the amount is a number of the quantity he/she needs, and the result is tell the character that he bought this kind of coffee and the amount and tell him/her that he/she needs to go to a nearby table to enjoy the coffee. If the character wants more than one type of things on the menu, the continue_ Time is 0.5 hours, the result is to tell him/her he/she should choose one thing to buy at once. If a game character's action here is not to purchase a specific coffee, The continue_ Time is 0.5 hours, the result is to tell the character to specify what coffee he/she needs and tell him the menu, without spending any money. If the customer want something else, the continue_ Time is 0.5 hours, the result is to tell him we don't sell this and say sorry, without spending any money.",
+    "description": "Lounge cafe counter. Characters can buy coffee to maintain energy for studying. The continue_Time is 0.5 hours.",
     "functions": [
-      {"earn": 200, "cost": 0, "action": "Sell goods", "onlyOwner": true},
-      {"earn": 10, "cost": 200, "action": "Buy goods", "onlyOwner": false}
+      {"earn": 200, "cost": 0, "action": "Sell coffee", "onlyOwner": true},
+      {"earn": 10, "cost": 200, "action": "Buy coffee", "onlyOwner": false}
     ],
     "economic": 64,
     "hireCapacity": 0,
@@ -850,13 +850,13 @@
   },
   {
     "id": 65,
-    "type": "cafe table",
+    "type": "study_table",
     "width": 3,
     "height": 1,
     "assets": "cafe table-3.0-1.0",
-    "description": "Any game character can have a meal/have a dessert/have a coffee/take a rest/eat anything that can be eaten/drunk here only if what he/she want to eat/have/drink has been bought. If so, the continue_ Time is 1 hours, the result is to tell the character that he/she has finished the meal/drink/eating. If they have not bought/had anything, the continue_ Time is 0.5 hours, the result is to tell the character that he/she doesn't have this and should bought something to drink/eat at the counter. He/she do not spend any money here.",
+    "description": "A collaborative or study table. Characters can read, discuss academic topics, or take a short rest here. The continue_Time is 1 hours.",
     "functions": [
-      {"earn": 200, "cost": 0, "action": "Take a rest", "onlyOwner": false}
+      {"earn": 200, "cost": 0, "action": "Study or discuss", "onlyOwner": false}
     ],
     "hireCapacity": 0,
     "livingCapacity": 0
